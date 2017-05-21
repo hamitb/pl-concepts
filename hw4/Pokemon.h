@@ -39,7 +39,7 @@ public:
 	virtual void setRooted(bool rooted);
 
 	// Own Methods
-
+    virtual void setDamage();
 protected:
 	int pokemonID; 	// Unique
 
@@ -50,13 +50,13 @@ protected:
 	int MAG_DEF;
 	int PHY_DEF;
 
-	bool burning;
-	bool drowning;
-	bool electrified;
-	bool rooted;
+	bool burning = false;
+	bool drowning = false;
+	bool electrified = false;
+	bool rooted = false;
 
 	// Own Attributes
-	
+	int CUR_DAM = 0;
 };
 
 #endif

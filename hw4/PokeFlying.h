@@ -7,7 +7,13 @@ class PokeFlying : public Pokemon
 {
 public:
 	// Add your public methods/attributes here.
-
+    PokeFlying(int pokemonID, const std::string& name);
+    void attackTo(Pokemon* target, Arena currentArena);
+    void levelUp();
+    void setElectrified(bool electrified);
+    void setDrowning(bool drowning);
+    void setBurning(bool burning);
+    void setRooted(bool rooted);
 protected:
 	// Add your protected methods/attributes here.
 

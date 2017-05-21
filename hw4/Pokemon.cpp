@@ -8,6 +8,8 @@
 Pokemon::Pokemon(int pokemonID, const std::string &name) {
     this->pokemonID = pokemonID;
     this->name = name;
+
+    CUR_DAM = 0;
 }
 
 Pokemon::~Pokemon() {
@@ -68,4 +70,8 @@ void Pokemon::setElectrified(bool electrified) {
 
 void Pokemon::setRooted(bool rooted) {
     this->rooted = rooted;
+}
+
+void Pokemon::setDamage() {
+    CUR_DAM = 0;
 }
