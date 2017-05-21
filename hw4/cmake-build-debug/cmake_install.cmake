@@ -1,4 +1,4 @@
-# Install script for directory: /Users/macbook/Desktop/METU/242/hw4
+# Install script for directory: /Users/macbook/Desktop/METU/242/github_project/hw4
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -35,5 +35,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/macbook/Desktop/METU/242/hw4/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/macbook/Desktop/METU/242/github_project/hw4/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
