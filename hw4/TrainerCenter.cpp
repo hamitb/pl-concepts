@@ -43,15 +43,21 @@ TrainerCenter::TrainerCenter(const std::string &inputFileName) {
 }
 
 TrainerCenter::~TrainerCenter() {
-
+    for(int i = 0; i < trainers.size(); i++) {
+        if(trainers[i])
+            delete trainers[i];
+    }
 }
 
 std::vector<Trainer *> &TrainerCenter::getAllTrainers() {
-    return <#initializer#>;
+    return trainers;
 }
 
 Trainer *TrainerCenter::getTrainerWithID(int trainerID) {
-    return NULL;
+    for(int i = 0; i < trainers.size(); i++) {
+        if(trainers[i]->getTrainerID() == trainerID)
+            return trainers[i];
+    }
 }
 
 int TrainerCenter::parsePokemonCount(std::string line) {
