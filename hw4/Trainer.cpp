@@ -7,12 +7,8 @@
 #include "Enums.h"
 #include "Trainer.h"
 
-Trainer::Trainer(int trainerID, const std::string &name, Arena favoriteArena, std::vector<Pokemon *> &pokemons) {
-    this->trainerID = trainerID;
-    this->name = name;
-    this->favoriteArena = favoriteArena;
-    this->pokemons = pokemons;
-}
+Trainer::Trainer(int trainerID, const std::string &name, Arena favoriteArena, std::vector<Pokemon *> &pokemons)
+    : name(name), trainerID(trainerID){ this->favoriteArena = favoriteArena; this->pokemons = pokemons; }
 
 Trainer::~Trainer() {
     for(int i = 0; i < pokemons.size(); i++) {
