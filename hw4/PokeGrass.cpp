@@ -14,7 +14,7 @@ PokeGrass::PokeGrass(int pokemonID, const std::string &name) : Pokemon(pokemonID
 }
 
 void PokeGrass::attackTo(Pokemon *target, Arena currentArena) {
-    if(!target->rooted){
+    if(!target->isRooted()){
         target->setRooted(true);
         target->setDamage();
     }

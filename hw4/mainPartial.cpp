@@ -27,7 +27,7 @@ bool attributeTest()
 	PokeWater water(1, "Psyduck");
 	PokeElectric electric(2, "Pikachu");
 	PokeGrass grass(3, "Bulbasaur");
-	PokeFlying flying(4, "Zapdos?");
+	PokeFlying flying(4, "Zapdos");
 
 	introduceYourself(&fire);
 	introduceYourself(&water);

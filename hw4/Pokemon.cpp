@@ -8,6 +8,12 @@
 Pokemon::Pokemon(int pokemonID, const std::string &name) {
     this->pokemonID = pokemonID;
     this->name = name;
+
+    CUR_DAM = 0;
+    burning = false;
+    drowning = false;
+    electrified = false;
+    rooted = false;
 }
 
 Pokemon::~Pokemon() {

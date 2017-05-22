@@ -14,7 +14,7 @@ PokeFire::PokeFire(int pokemonID, const std::string &name) : Pokemon(pokemonID, 
 }
 
 void PokeFire::attackTo(Pokemon *target, Arena currentArena) {
-    if(!target->burning){
+    if(!target->isBurning()){
         target->setBurning(true);
         target->setDamage();
     }

@@ -14,7 +14,7 @@ PokeElectric::PokeElectric(int pokemonID, const std::string &name) : Pokemon(pok
 }
 
 void PokeElectric::attackTo(Pokemon *target, Arena currentArena) {
-    if(!target->electrified) {
+    if(!target->isElectrified()) {
         target->setElectrified(true);
         target->setDamage();
     }

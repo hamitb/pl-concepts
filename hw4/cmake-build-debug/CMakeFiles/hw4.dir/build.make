@@ -57,28 +57,28 @@ include CMakeFiles/hw4.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/hw4.dir/flags.make
 
-CMakeFiles/hw4.dir/main.cpp.o: CMakeFiles/hw4.dir/flags.make
-CMakeFiles/hw4.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/macbook/Desktop/METU/242/github_project/hw4/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/hw4.dir/main.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/hw4.dir/main.cpp.o -c /Users/macbook/Desktop/METU/242/github_project/hw4/main.cpp
+CMakeFiles/hw4.dir/mainPartial.cpp.o: CMakeFiles/hw4.dir/flags.make
+CMakeFiles/hw4.dir/mainPartial.cpp.o: ../mainPartial.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/macbook/Desktop/METU/242/github_project/hw4/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/hw4.dir/mainPartial.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/hw4.dir/mainPartial.cpp.o -c /Users/macbook/Desktop/METU/242/github_project/hw4/mainPartial.cpp
 
-CMakeFiles/hw4.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hw4.dir/main.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/macbook/Desktop/METU/242/github_project/hw4/main.cpp > CMakeFiles/hw4.dir/main.cpp.i
+CMakeFiles/hw4.dir/mainPartial.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hw4.dir/mainPartial.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/macbook/Desktop/METU/242/github_project/hw4/mainPartial.cpp > CMakeFiles/hw4.dir/mainPartial.cpp.i
 
-CMakeFiles/hw4.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hw4.dir/main.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/macbook/Desktop/METU/242/github_project/hw4/main.cpp -o CMakeFiles/hw4.dir/main.cpp.s
+CMakeFiles/hw4.dir/mainPartial.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hw4.dir/mainPartial.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/macbook/Desktop/METU/242/github_project/hw4/mainPartial.cpp -o CMakeFiles/hw4.dir/mainPartial.cpp.s
 
-CMakeFiles/hw4.dir/main.cpp.o.requires:
+CMakeFiles/hw4.dir/mainPartial.cpp.o.requires:
 
-.PHONY : CMakeFiles/hw4.dir/main.cpp.o.requires
+.PHONY : CMakeFiles/hw4.dir/mainPartial.cpp.o.requires
 
-CMakeFiles/hw4.dir/main.cpp.o.provides: CMakeFiles/hw4.dir/main.cpp.o.requires
-	$(MAKE) -f CMakeFiles/hw4.dir/build.make CMakeFiles/hw4.dir/main.cpp.o.provides.build
-.PHONY : CMakeFiles/hw4.dir/main.cpp.o.provides
+CMakeFiles/hw4.dir/mainPartial.cpp.o.provides: CMakeFiles/hw4.dir/mainPartial.cpp.o.requires
+	$(MAKE) -f CMakeFiles/hw4.dir/build.make CMakeFiles/hw4.dir/mainPartial.cpp.o.provides.build
+.PHONY : CMakeFiles/hw4.dir/mainPartial.cpp.o.provides
 
-CMakeFiles/hw4.dir/main.cpp.o.provides.build: CMakeFiles/hw4.dir/main.cpp.o
+CMakeFiles/hw4.dir/mainPartial.cpp.o.provides.build: CMakeFiles/hw4.dir/mainPartial.cpp.o
 
 
 CMakeFiles/hw4.dir/Pokemon.cpp.o: CMakeFiles/hw4.dir/flags.make
@@ -249,71 +249,21 @@ CMakeFiles/hw4.dir/Trainer.cpp.o.provides: CMakeFiles/hw4.dir/Trainer.cpp.o.requ
 CMakeFiles/hw4.dir/Trainer.cpp.o.provides.build: CMakeFiles/hw4.dir/Trainer.cpp.o
 
 
-CMakeFiles/hw4.dir/Tournament.cpp.o: CMakeFiles/hw4.dir/flags.make
-CMakeFiles/hw4.dir/Tournament.cpp.o: ../Tournament.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/macbook/Desktop/METU/242/github_project/hw4/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/hw4.dir/Tournament.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/hw4.dir/Tournament.cpp.o -c /Users/macbook/Desktop/METU/242/github_project/hw4/Tournament.cpp
-
-CMakeFiles/hw4.dir/Tournament.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hw4.dir/Tournament.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/macbook/Desktop/METU/242/github_project/hw4/Tournament.cpp > CMakeFiles/hw4.dir/Tournament.cpp.i
-
-CMakeFiles/hw4.dir/Tournament.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hw4.dir/Tournament.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/macbook/Desktop/METU/242/github_project/hw4/Tournament.cpp -o CMakeFiles/hw4.dir/Tournament.cpp.s
-
-CMakeFiles/hw4.dir/Tournament.cpp.o.requires:
-
-.PHONY : CMakeFiles/hw4.dir/Tournament.cpp.o.requires
-
-CMakeFiles/hw4.dir/Tournament.cpp.o.provides: CMakeFiles/hw4.dir/Tournament.cpp.o.requires
-	$(MAKE) -f CMakeFiles/hw4.dir/build.make CMakeFiles/hw4.dir/Tournament.cpp.o.provides.build
-.PHONY : CMakeFiles/hw4.dir/Tournament.cpp.o.provides
-
-CMakeFiles/hw4.dir/Tournament.cpp.o.provides.build: CMakeFiles/hw4.dir/Tournament.cpp.o
-
-
-CMakeFiles/hw4.dir/TrainerCenter.cpp.o: CMakeFiles/hw4.dir/flags.make
-CMakeFiles/hw4.dir/TrainerCenter.cpp.o: ../TrainerCenter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/macbook/Desktop/METU/242/github_project/hw4/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/hw4.dir/TrainerCenter.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/hw4.dir/TrainerCenter.cpp.o -c /Users/macbook/Desktop/METU/242/github_project/hw4/TrainerCenter.cpp
-
-CMakeFiles/hw4.dir/TrainerCenter.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hw4.dir/TrainerCenter.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/macbook/Desktop/METU/242/github_project/hw4/TrainerCenter.cpp > CMakeFiles/hw4.dir/TrainerCenter.cpp.i
-
-CMakeFiles/hw4.dir/TrainerCenter.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hw4.dir/TrainerCenter.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/macbook/Desktop/METU/242/github_project/hw4/TrainerCenter.cpp -o CMakeFiles/hw4.dir/TrainerCenter.cpp.s
-
-CMakeFiles/hw4.dir/TrainerCenter.cpp.o.requires:
-
-.PHONY : CMakeFiles/hw4.dir/TrainerCenter.cpp.o.requires
-
-CMakeFiles/hw4.dir/TrainerCenter.cpp.o.provides: CMakeFiles/hw4.dir/TrainerCenter.cpp.o.requires
-	$(MAKE) -f CMakeFiles/hw4.dir/build.make CMakeFiles/hw4.dir/TrainerCenter.cpp.o.provides.build
-.PHONY : CMakeFiles/hw4.dir/TrainerCenter.cpp.o.provides
-
-CMakeFiles/hw4.dir/TrainerCenter.cpp.o.provides.build: CMakeFiles/hw4.dir/TrainerCenter.cpp.o
-
-
 # Object files for target hw4
 hw4_OBJECTS = \
-"CMakeFiles/hw4.dir/main.cpp.o" \
+"CMakeFiles/hw4.dir/mainPartial.cpp.o" \
 "CMakeFiles/hw4.dir/Pokemon.cpp.o" \
 "CMakeFiles/hw4.dir/PokeWater.cpp.o" \
 "CMakeFiles/hw4.dir/PokeElectric.cpp.o" \
 "CMakeFiles/hw4.dir/PokeFire.cpp.o" \
 "CMakeFiles/hw4.dir/PokeFlying.cpp.o" \
 "CMakeFiles/hw4.dir/PokeGrass.cpp.o" \
-"CMakeFiles/hw4.dir/Trainer.cpp.o" \
-"CMakeFiles/hw4.dir/Tournament.cpp.o" \
-"CMakeFiles/hw4.dir/TrainerCenter.cpp.o"
+"CMakeFiles/hw4.dir/Trainer.cpp.o"
 
 # External object files for target hw4
 hw4_EXTERNAL_OBJECTS =
 
-hw4: CMakeFiles/hw4.dir/main.cpp.o
+hw4: CMakeFiles/hw4.dir/mainPartial.cpp.o
 hw4: CMakeFiles/hw4.dir/Pokemon.cpp.o
 hw4: CMakeFiles/hw4.dir/PokeWater.cpp.o
 hw4: CMakeFiles/hw4.dir/PokeElectric.cpp.o
@@ -321,11 +271,9 @@ hw4: CMakeFiles/hw4.dir/PokeFire.cpp.o
 hw4: CMakeFiles/hw4.dir/PokeFlying.cpp.o
 hw4: CMakeFiles/hw4.dir/PokeGrass.cpp.o
 hw4: CMakeFiles/hw4.dir/Trainer.cpp.o
-hw4: CMakeFiles/hw4.dir/Tournament.cpp.o
-hw4: CMakeFiles/hw4.dir/TrainerCenter.cpp.o
 hw4: CMakeFiles/hw4.dir/build.make
 hw4: CMakeFiles/hw4.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/macbook/Desktop/METU/242/github_project/hw4/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable hw4"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/macbook/Desktop/METU/242/github_project/hw4/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable hw4"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/hw4.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -333,7 +281,7 @@ CMakeFiles/hw4.dir/build: hw4
 
 .PHONY : CMakeFiles/hw4.dir/build
 
-CMakeFiles/hw4.dir/requires: CMakeFiles/hw4.dir/main.cpp.o.requires
+CMakeFiles/hw4.dir/requires: CMakeFiles/hw4.dir/mainPartial.cpp.o.requires
 CMakeFiles/hw4.dir/requires: CMakeFiles/hw4.dir/Pokemon.cpp.o.requires
 CMakeFiles/hw4.dir/requires: CMakeFiles/hw4.dir/PokeWater.cpp.o.requires
 CMakeFiles/hw4.dir/requires: CMakeFiles/hw4.dir/PokeElectric.cpp.o.requires
@@ -341,8 +289,6 @@ CMakeFiles/hw4.dir/requires: CMakeFiles/hw4.dir/PokeFire.cpp.o.requires
 CMakeFiles/hw4.dir/requires: CMakeFiles/hw4.dir/PokeFlying.cpp.o.requires
 CMakeFiles/hw4.dir/requires: CMakeFiles/hw4.dir/PokeGrass.cpp.o.requires
 CMakeFiles/hw4.dir/requires: CMakeFiles/hw4.dir/Trainer.cpp.o.requires
-CMakeFiles/hw4.dir/requires: CMakeFiles/hw4.dir/Tournament.cpp.o.requires
-CMakeFiles/hw4.dir/requires: CMakeFiles/hw4.dir/TrainerCenter.cpp.o.requires
 
 .PHONY : CMakeFiles/hw4.dir/requires
 

@@ -285,33 +285,6 @@ Pokemon.cpp.s:
 	$(MAKE) -f CMakeFiles/hw4.dir/build.make CMakeFiles/hw4.dir/Pokemon.cpp.s
 .PHONY : Pokemon.cpp.s
 
-Tournament.o: Tournament.cpp.o
-
-.PHONY : Tournament.o
-
-# target to build an object file
-Tournament.cpp.o:
-	$(MAKE) -f CMakeFiles/hw4.dir/build.make CMakeFiles/hw4.dir/Tournament.cpp.o
-.PHONY : Tournament.cpp.o
-
-Tournament.i: Tournament.cpp.i
-
-.PHONY : Tournament.i
-
-# target to preprocess a source file
-Tournament.cpp.i:
-	$(MAKE) -f CMakeFiles/hw4.dir/build.make CMakeFiles/hw4.dir/Tournament.cpp.i
-.PHONY : Tournament.cpp.i
-
-Tournament.s: Tournament.cpp.s
-
-.PHONY : Tournament.s
-
-# target to generate assembly for a file
-Tournament.cpp.s:
-	$(MAKE) -f CMakeFiles/hw4.dir/build.make CMakeFiles/hw4.dir/Tournament.cpp.s
-.PHONY : Tournament.cpp.s
-
 Trainer.o: Trainer.cpp.o
 
 .PHONY : Trainer.o
@@ -339,59 +312,32 @@ Trainer.cpp.s:
 	$(MAKE) -f CMakeFiles/hw4.dir/build.make CMakeFiles/hw4.dir/Trainer.cpp.s
 .PHONY : Trainer.cpp.s
 
-TrainerCenter.o: TrainerCenter.cpp.o
+mainPartial.o: mainPartial.cpp.o
 
-.PHONY : TrainerCenter.o
-
-# target to build an object file
-TrainerCenter.cpp.o:
-	$(MAKE) -f CMakeFiles/hw4.dir/build.make CMakeFiles/hw4.dir/TrainerCenter.cpp.o
-.PHONY : TrainerCenter.cpp.o
-
-TrainerCenter.i: TrainerCenter.cpp.i
-
-.PHONY : TrainerCenter.i
-
-# target to preprocess a source file
-TrainerCenter.cpp.i:
-	$(MAKE) -f CMakeFiles/hw4.dir/build.make CMakeFiles/hw4.dir/TrainerCenter.cpp.i
-.PHONY : TrainerCenter.cpp.i
-
-TrainerCenter.s: TrainerCenter.cpp.s
-
-.PHONY : TrainerCenter.s
-
-# target to generate assembly for a file
-TrainerCenter.cpp.s:
-	$(MAKE) -f CMakeFiles/hw4.dir/build.make CMakeFiles/hw4.dir/TrainerCenter.cpp.s
-.PHONY : TrainerCenter.cpp.s
-
-main.o: main.cpp.o
-
-.PHONY : main.o
+.PHONY : mainPartial.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/hw4.dir/build.make CMakeFiles/hw4.dir/main.cpp.o
-.PHONY : main.cpp.o
+mainPartial.cpp.o:
+	$(MAKE) -f CMakeFiles/hw4.dir/build.make CMakeFiles/hw4.dir/mainPartial.cpp.o
+.PHONY : mainPartial.cpp.o
 
-main.i: main.cpp.i
+mainPartial.i: mainPartial.cpp.i
 
-.PHONY : main.i
+.PHONY : mainPartial.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/hw4.dir/build.make CMakeFiles/hw4.dir/main.cpp.i
-.PHONY : main.cpp.i
+mainPartial.cpp.i:
+	$(MAKE) -f CMakeFiles/hw4.dir/build.make CMakeFiles/hw4.dir/mainPartial.cpp.i
+.PHONY : mainPartial.cpp.i
 
-main.s: main.cpp.s
+mainPartial.s: mainPartial.cpp.s
 
-.PHONY : main.s
+.PHONY : mainPartial.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/hw4.dir/build.make CMakeFiles/hw4.dir/main.cpp.s
-.PHONY : main.cpp.s
+mainPartial.cpp.s:
+	$(MAKE) -f CMakeFiles/hw4.dir/build.make CMakeFiles/hw4.dir/mainPartial.cpp.s
+.PHONY : mainPartial.cpp.s
 
 # Help Target
 help:
@@ -420,18 +366,12 @@ help:
 	@echo "... Pokemon.o"
 	@echo "... Pokemon.i"
 	@echo "... Pokemon.s"
-	@echo "... Tournament.o"
-	@echo "... Tournament.i"
-	@echo "... Tournament.s"
 	@echo "... Trainer.o"
 	@echo "... Trainer.i"
 	@echo "... Trainer.s"
-	@echo "... TrainerCenter.o"
-	@echo "... TrainerCenter.i"
-	@echo "... TrainerCenter.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... mainPartial.o"
+	@echo "... mainPartial.i"
+	@echo "... mainPartial.s"
 .PHONY : help
 
 

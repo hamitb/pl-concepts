@@ -7,7 +7,7 @@
 #include "PokeFlying.h"
 
 PokeFlying::PokeFlying(int pokemonID, const std::string &name) : Pokemon(pokemonID, name) {
-    HP = 600;
+    HP = 650;
     ATK = 55;
     MAG_DEF = 0;
     PHY_DEF = 15;

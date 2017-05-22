@@ -14,7 +14,7 @@ PokeWater::PokeWater(int pokemonID, const std::string &name) : Pokemon(pokemonID
 }
 
 void PokeWater::attackTo(Pokemon *target, Arena currentArena) {
-    if(!target->drowning){
+    if(!target->isDrowning()){
         target->setDrowning(true);
         target->setDamage();
     }

@@ -50,13 +50,13 @@ protected:
 	int MAG_DEF;
 	int PHY_DEF;
 
-	bool burning = false;
-	bool drowning = false;
-	bool electrified = false;
-	bool rooted = false;
+	bool burning;
+	bool drowning;
+	bool electrified;
+	bool rooted;
 
 	// Own Attributes
-	int CUR_DAM = 0;
+	int CUR_DAM;
 };
 
 #endif
