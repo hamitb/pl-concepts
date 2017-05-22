@@ -11,6 +11,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/macbook/Desktop/METU/242/github_project/hw4/PokeWater.cpp" "/Users/macbook/Desktop/METU/242/github_project/hw4/cmake-build-debug/CMakeFiles/hw4.dir/PokeWater.cpp.o"
   "/Users/macbook/Desktop/METU/242/github_project/hw4/Pokemon.cpp" "/Users/macbook/Desktop/METU/242/github_project/hw4/cmake-build-debug/CMakeFiles/hw4.dir/Pokemon.cpp.o"
   "/Users/macbook/Desktop/METU/242/github_project/hw4/Trainer.cpp" "/Users/macbook/Desktop/METU/242/github_project/hw4/cmake-build-debug/CMakeFiles/hw4.dir/Trainer.cpp.o"
+  "/Users/macbook/Desktop/METU/242/github_project/hw4/TrainerCenter.cpp" "/Users/macbook/Desktop/METU/242/github_project/hw4/cmake-build-debug/CMakeFiles/hw4.dir/TrainerCenter.cpp.o"
   "/Users/macbook/Desktop/METU/242/github_project/hw4/mainPartial.cpp" "/Users/macbook/Desktop/METU/242/github_project/hw4/cmake-build-debug/CMakeFiles/hw4.dir/mainPartial.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")

@@ -3,6 +3,7 @@
 //
 
 #include <string>
+#include <iostream>
 #include <vector>
 #include <fstream>
 #include "Trainer.h"
@@ -40,6 +41,7 @@ TrainerCenter::TrainerCenter(const std::string &inputFileName) {
         trainers.push_back(trainer);
         getline(inputFile, line);
     }
+
 }
 
 TrainerCenter::~TrainerCenter() {
@@ -103,15 +105,15 @@ Pokemon *TrainerCenter::parsePokemon(std::string line) {
     strcpy(cstr, line.c_str());
 
     sscanf(cstr, "%d %s %s", &id, name, type);
-    if(strncmp(name,"FIRE", strlen(name)) == 0)
+    if(strncmp(type,"FIRE", strlen(type)) == 0)
         pokemon = new PokeFire(id, name);
-    else if(strncmp(name,"WATER", strlen(name)) == 0)
+    else if(strncmp(type,"WATER", strlen(type)) == 0)
         pokemon = new PokeWater(id, name);
-    else if(strncmp(name,"ELECTRIC", strlen(name)) == 0)
+    else if(strncmp(type,"ELECTRIC", strlen(type)) == 0)
         pokemon = new PokeElectric(id, name);
-    else if(strncmp(name,"GRASS", strlen(name)) == 0)
+    else if(strncmp(type,"GRASS", strlen(type)) == 0)
         pokemon = new PokeGrass(id, name);
-    else if(strncmp(name,"FLYING", strlen(name)) == 0)
+    else if(strncmp(type,"FLYING", strlen(type)) == 0)
         pokemon = new PokeFlying(id, name);
     else
         pokemon = new PokeFire(id, name);
@@ -160,4 +162,10 @@ Trainer *TrainerCenter::parseTrainer(std::string line, std::vector<Pokemon*> pok
     delete[] cstr;
 
     return trainer;
+}
+
+void TrainerCenter::Info() {
+    for(int i = 0; i < trainers.size(); i++) {
+        trainers[i]->Info();
+    }
 }

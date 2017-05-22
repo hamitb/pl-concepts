@@ -20,7 +20,7 @@ public:
 	Arena getFavoriteArena() const;
 
 	// Own Methods
-
+    void Info();
 private:
 	int trainerID; 		// Unique
 	std::string name;

@@ -3,5 +3,5 @@ project(hw4)
 
 set(CMAKE_CXX_STANDARD 98)
 
-set(SOURCE_FILES mainPartial.cpp Pokemon.cpp PokeWater.cpp PokeElectric.cpp PokeFire.cpp PokeFlying.cpp PokeGrass.cpp Trainer.cpp )
+set(SOURCE_FILES mainPartial.cpp Pokemon.cpp PokeWater.cpp PokeElectric.cpp PokeFire.cpp PokeFlying.cpp PokeGrass.cpp Trainer.cpp TrainerCenter.cpp)
 add_executable(hw4 ${SOURCE_FILES})

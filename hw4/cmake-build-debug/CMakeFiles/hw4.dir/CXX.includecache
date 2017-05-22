@@ -11,6 +11,8 @@
 /Users/macbook/Desktop/METU/242/github_project/hw4/PokeElectric.cpp
 string
 -
+iostream
+-
 Pokemon.h
 /Users/macbook/Desktop/METU/242/github_project/hw4/Pokemon.h
 PokeElectric.h
@@ -22,6 +24,8 @@ Pokemon.h
 
 /Users/macbook/Desktop/METU/242/github_project/hw4/PokeFire.cpp
 string
+-
+iostream
 -
 Pokemon.h
 /Users/macbook/Desktop/METU/242/github_project/hw4/Pokemon.h
@@ -35,6 +39,8 @@ Pokemon.h
 /Users/macbook/Desktop/METU/242/github_project/hw4/PokeFlying.cpp
 string
 -
+iostream
+-
 Pokemon.h
 /Users/macbook/Desktop/METU/242/github_project/hw4/Pokemon.h
 PokeFlying.h
@@ -47,6 +53,8 @@ Pokemon.h
 /Users/macbook/Desktop/METU/242/github_project/hw4/PokeGrass.cpp
 string
 -
+iostream
+-
 Pokemon.h
 /Users/macbook/Desktop/METU/242/github_project/hw4/Pokemon.h
 PokeGrass.h
@@ -58,6 +66,8 @@ Pokemon.h
 
 /Users/macbook/Desktop/METU/242/github_project/hw4/PokeWater.cpp
 string
+-
+iostream
 -
 Pokemon.h
 /Users/macbook/Desktop/METU/242/github_project/hw4/Pokemon.h
@@ -85,6 +95,8 @@ string
 -
 vector
 -
+iostream
+-
 Enums.h
 /Users/macbook/Desktop/METU/242/github_project/hw4/Enums.h
 Trainer.h
@@ -98,6 +110,40 @@ vector
 Pokemon.h
 /Users/macbook/Desktop/METU/242/github_project/hw4/Pokemon.h
 
+/Users/macbook/Desktop/METU/242/github_project/hw4/TrainerCenter.cpp
+string
+-
+iostream
+-
+vector
+-
+fstream
+-
+Trainer.h
+/Users/macbook/Desktop/METU/242/github_project/hw4/Trainer.h
+TrainerCenter.h
+/Users/macbook/Desktop/METU/242/github_project/hw4/TrainerCenter.h
+
+/Users/macbook/Desktop/METU/242/github_project/hw4/TrainerCenter.h
+Trainer.h
+/Users/macbook/Desktop/METU/242/github_project/hw4/Trainer.h
+Pokemon.h
+/Users/macbook/Desktop/METU/242/github_project/hw4/Pokemon.h
+PokeFire.h
+/Users/macbook/Desktop/METU/242/github_project/hw4/PokeFire.h
+PokeWater.h
+/Users/macbook/Desktop/METU/242/github_project/hw4/PokeWater.h
+PokeElectric.h
+/Users/macbook/Desktop/METU/242/github_project/hw4/PokeElectric.h
+PokeGrass.h
+/Users/macbook/Desktop/METU/242/github_project/hw4/PokeGrass.h
+PokeFlying.h
+/Users/macbook/Desktop/METU/242/github_project/hw4/PokeFlying.h
+vector
+-
+string
+-
+
 /Users/macbook/Desktop/METU/242/github_project/hw4/mainPartial.cpp
 PokeFire.h
 /Users/macbook/Desktop/METU/242/github_project/hw4/PokeFire.h
@@ -109,6 +155,8 @@ PokeGrass.h
 /Users/macbook/Desktop/METU/242/github_project/hw4/PokeGrass.h
 PokeFlying.h
 /Users/macbook/Desktop/METU/242/github_project/hw4/PokeFlying.h
+TrainerCenter.h
+/Users/macbook/Desktop/METU/242/github_project/hw4/TrainerCenter.h
 iostream
 -
 

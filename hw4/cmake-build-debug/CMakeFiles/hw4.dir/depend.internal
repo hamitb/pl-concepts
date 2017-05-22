@@ -35,6 +35,17 @@ CMakeFiles/hw4.dir/Trainer.cpp.o
  /Users/macbook/Desktop/METU/242/github_project/hw4/Pokemon.h
  /Users/macbook/Desktop/METU/242/github_project/hw4/Trainer.cpp
  /Users/macbook/Desktop/METU/242/github_project/hw4/Trainer.h
+CMakeFiles/hw4.dir/TrainerCenter.cpp.o
+ /Users/macbook/Desktop/METU/242/github_project/hw4/Enums.h
+ /Users/macbook/Desktop/METU/242/github_project/hw4/PokeElectric.h
+ /Users/macbook/Desktop/METU/242/github_project/hw4/PokeFire.h
+ /Users/macbook/Desktop/METU/242/github_project/hw4/PokeFlying.h
+ /Users/macbook/Desktop/METU/242/github_project/hw4/PokeGrass.h
+ /Users/macbook/Desktop/METU/242/github_project/hw4/PokeWater.h
+ /Users/macbook/Desktop/METU/242/github_project/hw4/Pokemon.h
+ /Users/macbook/Desktop/METU/242/github_project/hw4/Trainer.h
+ /Users/macbook/Desktop/METU/242/github_project/hw4/TrainerCenter.cpp
+ /Users/macbook/Desktop/METU/242/github_project/hw4/TrainerCenter.h
 CMakeFiles/hw4.dir/mainPartial.cpp.o
  /Users/macbook/Desktop/METU/242/github_project/hw4/Enums.h
  /Users/macbook/Desktop/METU/242/github_project/hw4/PokeElectric.h
@@ -43,4 +54,6 @@ CMakeFiles/hw4.dir/mainPartial.cpp.o
  /Users/macbook/Desktop/METU/242/github_project/hw4/PokeGrass.h
  /Users/macbook/Desktop/METU/242/github_project/hw4/PokeWater.h
  /Users/macbook/Desktop/METU/242/github_project/hw4/Pokemon.h
+ /Users/macbook/Desktop/METU/242/github_project/hw4/Trainer.h
+ /Users/macbook/Desktop/METU/242/github_project/hw4/TrainerCenter.h
  /Users/macbook/Desktop/METU/242/github_project/hw4/mainPartial.cpp

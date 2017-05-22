@@ -3,22 +3,31 @@
 #include "PokeElectric.h"
 #include "PokeGrass.h"
 #include "PokeFlying.h"
+#include "TrainerCenter.h"
 
 #include <iostream>
 
 bool attributeTest();
 bool effectTest();
+bool trainerCenterTest();
 
 void introduceYourself(Pokemon *pokemon);
 
 int main(int argc, char** argv)
 {
-	if(!attributeTest() || !effectTest()) // || aTest() || anotherTest() ...
+	if(!attributeTest() || !effectTest() || !trainerCenterTest()) // || aTest() || anotherTest() ...
 	{
 		return -1;
 	}
 
 	return 0;
+}
+
+bool trainerCenterTest() {
+    TrainerCenter newCenter("2Trainers.txt");
+
+    newCenter.Info();
+    return true;
 }
 
 bool attributeTest()

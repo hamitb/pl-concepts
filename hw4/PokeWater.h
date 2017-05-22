@@ -12,6 +12,7 @@ public:
     void levelUp();
     void setDrowning(bool drowning);
     void setDamage();
+    void Info();
 protected:
 	// Add your protected methods/attributes here.
 private:

@@ -3,6 +3,7 @@
 //
 
 #include <string>
+#include <iostream>
 #include "Pokemon.h"
 #include "PokeGrass.h"
 
@@ -40,4 +41,7 @@ void PokeGrass::setDamage() {
         CUR_DAM = ELECTRIFY_DAMAGE;
 }
 
+void PokeGrass::Info() {
+    std::cout << "[" << name << ", " << pokemonID << ", GRASS]" << std::endl;
+}
 

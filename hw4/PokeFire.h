@@ -12,6 +12,7 @@ public:
     void levelUp();
     void setBurning(bool burning);
     void setDamage();
+    void Info();
 protected:
 	// Add your protected methods/attributes here.
 private:

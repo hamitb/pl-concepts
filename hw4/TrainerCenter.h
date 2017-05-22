@@ -24,6 +24,7 @@ public:
 	Trainer* getTrainerWithID(int trainerID);
 
 	// Own Methods
+    void Info();
 
 private:
 	// Own Attributes

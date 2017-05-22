@@ -3,6 +3,7 @@
 //
 
 #include <string>
+#include <iostream>
 #include "Pokemon.h"
 #include "PokeFlying.h"
 
@@ -38,4 +39,8 @@ void PokeFlying::setBurning(bool burning) {
 
 void PokeFlying::setRooted(bool rooted) {
     this->rooted = false;
+}
+
+void PokeFlying::Info() {
+    std::cout << "[" << name << ", " << pokemonID << ", FLYING]" << std::endl;
 }

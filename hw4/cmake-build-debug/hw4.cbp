@@ -124,6 +124,12 @@
 		<Unit filename="/Users/macbook/Desktop/METU/242/github_project/hw4/Trainer.h">
 			<Option target="hw4"/>
 		</Unit>
+		<Unit filename="/Users/macbook/Desktop/METU/242/github_project/hw4/TrainerCenter.cpp">
+			<Option target="hw4"/>
+		</Unit>
+		<Unit filename="/Users/macbook/Desktop/METU/242/github_project/hw4/TrainerCenter.h">
+			<Option target="hw4"/>
+		</Unit>
 		<Unit filename="/Users/macbook/Desktop/METU/242/github_project/hw4/mainPartial.cpp">
 			<Option target="hw4"/>
 		</Unit>

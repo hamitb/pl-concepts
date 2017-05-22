@@ -14,6 +14,7 @@ public:
     void setDrowning(bool drowning);
     void setBurning(bool burning);
     void setRooted(bool rooted);
+    void Info();
 protected:
 	// Add your protected methods/attributes here.
 

@@ -312,6 +312,33 @@ Trainer.cpp.s:
 	$(MAKE) -f CMakeFiles/hw4.dir/build.make CMakeFiles/hw4.dir/Trainer.cpp.s
 .PHONY : Trainer.cpp.s
 
+TrainerCenter.o: TrainerCenter.cpp.o
+
+.PHONY : TrainerCenter.o
+
+# target to build an object file
+TrainerCenter.cpp.o:
+	$(MAKE) -f CMakeFiles/hw4.dir/build.make CMakeFiles/hw4.dir/TrainerCenter.cpp.o
+.PHONY : TrainerCenter.cpp.o
+
+TrainerCenter.i: TrainerCenter.cpp.i
+
+.PHONY : TrainerCenter.i
+
+# target to preprocess a source file
+TrainerCenter.cpp.i:
+	$(MAKE) -f CMakeFiles/hw4.dir/build.make CMakeFiles/hw4.dir/TrainerCenter.cpp.i
+.PHONY : TrainerCenter.cpp.i
+
+TrainerCenter.s: TrainerCenter.cpp.s
+
+.PHONY : TrainerCenter.s
+
+# target to generate assembly for a file
+TrainerCenter.cpp.s:
+	$(MAKE) -f CMakeFiles/hw4.dir/build.make CMakeFiles/hw4.dir/TrainerCenter.cpp.s
+.PHONY : TrainerCenter.cpp.s
+
 mainPartial.o: mainPartial.cpp.o
 
 .PHONY : mainPartial.o
@@ -369,6 +396,9 @@ help:
 	@echo "... Trainer.o"
 	@echo "... Trainer.i"
 	@echo "... Trainer.s"
+	@echo "... TrainerCenter.o"
+	@echo "... TrainerCenter.i"
+	@echo "... TrainerCenter.s"
 	@echo "... mainPartial.o"
 	@echo "... mainPartial.i"
 	@echo "... mainPartial.s"

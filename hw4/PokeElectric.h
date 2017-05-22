@@ -12,6 +12,7 @@ public:
     void levelUp();
     void setElectrified(bool electrified);
     void setDamage();
+    void Info();
 protected:
 	// Add your protected methods/attributes here.
 private:

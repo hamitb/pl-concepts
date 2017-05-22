@@ -40,6 +40,7 @@ public:
 
 	// Own Methods
     virtual void setDamage();
+    virtual void Info() = 0;
 protected:
 	int pokemonID; 	// Unique
 

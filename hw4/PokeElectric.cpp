@@ -3,6 +3,7 @@
 //
 
 #include <string>
+#include <iostream>
 #include "Pokemon.h"
 #include "PokeElectric.h"
 
@@ -38,4 +39,8 @@ void PokeElectric::setDamage() {
         CUR_DAM = BURN_DAMAGE;
     else if(drowning)
         CUR_DAM = DROWN_DAMAGE;
+}
+
+void PokeElectric::Info() {
+    std::cout << "[" << name << ", " << pokemonID << ", ELECTRIC]" << std::endl;
 }

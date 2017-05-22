@@ -4,6 +4,7 @@
 
 #include <string>
 #include <vector>
+#include <iostream>
 #include "Enums.h"
 #include "Trainer.h"
 
@@ -27,4 +28,11 @@ const std::string &Trainer::getName() const {
 
 Arena Trainer::getFavoriteArena() const {
     return favoriteArena;
+}
+
+void Trainer::Info() {
+    std::cout << "**" << trainerID << ", " << name << ", " << favoriteArena << "**" << std::endl;
+    for(int i = 0; i < pokemons.size(); i ++) {
+        pokemons[i]->Info();
+    }
 }

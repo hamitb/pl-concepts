@@ -3,6 +3,7 @@
 //
 
 #include <string>
+#include <iostream>
 #include "Pokemon.h"
 #include "PokeFire.h"
 
@@ -38,4 +39,8 @@ void PokeFire::setDamage() {
         CUR_DAM = ELECTRIFY_DAMAGE;
     else if(rooted)
         CUR_DAM = ROOT_DAMAGE;
+}
+
+void PokeFire::Info() {
+    std::cout << "[" << name << ", " << pokemonID << ", FIRE]" << std::endl;
 }
