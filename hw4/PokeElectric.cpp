@@ -12,35 +12,79 @@ PokeElectric::PokeElectric(int pokemonID, const std::string &name) : Pokemon(pok
     ATK = 70;
     MAG_DEF = 30;
     PHY_DEF = 0;
+    EFFECT = ELECTRIFIED;
 }
 
 void PokeElectric::attackTo(Pokemon *target, Arena currentArena) {
-    if(!target->isElectrified()) {
-        target->setElectrified(true);
-        target->setDamage();
-    }
+    applyEffect(EFFECT, target);
 }
 
 void PokeElectric::levelUp() {
-    HP += 50;
-    ATK += 7;
-    MAG_DEF += 3;
-    PHY_DEF += 0;
+    level++;
+    getLevelBonus();
 }
 
 void PokeElectric::setElectrified(bool electrified) {
     this->electrified = false;
 }
 
-void PokeElectric::setDamage() {
-    if(rooted)
-        CUR_DAM = ROOT_DAMAGE * 2;
-    else if(burning)
-        CUR_DAM = BURN_DAMAGE;
-    else if(drowning)
-        CUR_DAM = DROWN_DAMAGE;
+void PokeElectric::setEffDamage() {
+    if(rooted){
+        CUR_EFF_DAM = ROOT_DAMAGE * 2;
+        isDoubled = true;
+    }
+    else if(burning){
+        CUR_EFF_DAM = BURN_DAMAGE;
+        isDoubled = false;
+    }
+    else if(drowning){
+        CUR_EFF_DAM = DROWN_DAMAGE;
+        isDoubled = false;
+    }
 }
 
 void PokeElectric::Info() {
     std::cout << "[" << name << ", " << pokemonID << ", ELECTRIC]" << std::endl;
+}
+
+void PokeElectric::Reset() {
+    CUR_EFF_DAM = 0;
+    CUR_ATT_DAM = 0;
+    burning = false;
+    drowning = false;
+    electrified = false;
+    rooted = false;
+    dead = false;
+    isDoubled = false;
+
+    HP = 500;
+    ATK = 70;
+    MAG_DEF = 30;
+    PHY_DEF = 0;
+
+    getLevelBonus();
+}
+
+void PokeElectric::getLevelBonus() {
+    HP += 50 * level;
+    ATK += 7 * level;
+    MAG_DEF += 3 * level;
+    PHY_DEF += 0 * level;
+}
+
+void PokeElectric::setArenaEff(Arena arena) {
+    switch(arena)
+    {
+        case ELECTRICITY:
+            HP += 100; ATK += 10; arenaBuff = 1;
+            break;
+        case MAGMA:
+            HP -= 100; ATK -= 10; arenaBuff = -1;
+            break;
+        case FOREST:
+            HP -= 100; ATK -= 10; arenaBuff = -1;
+            break;
+        case STADIUM:
+            arenaBuff = 0;
+    }
 }

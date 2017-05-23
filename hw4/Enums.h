@@ -11,10 +11,11 @@
 
 enum Effect
 {
+	NOTHING,
 	BURNING,
 	DROWNING,
 	ELECTRIFIED,
-	ROOTED
+	ROOTED,
 };
 
 enum Arena

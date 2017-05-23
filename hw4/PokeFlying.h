@@ -15,9 +15,11 @@ public:
     void setBurning(bool burning);
     void setRooted(bool rooted);
     void Info();
+    void Reset();
+    void setArenaEff(Arena arena);
 protected:
 	// Add your protected methods/attributes here.
-
+    virtual void getLevelBonus();
 private:
 	// Add your private methods/attributes here.
 	

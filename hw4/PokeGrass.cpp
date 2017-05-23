@@ -12,36 +12,79 @@ PokeGrass::PokeGrass(int pokemonID, const std::string &name) : Pokemon(pokemonID
     ATK = 40;
     MAG_DEF = 0;
     PHY_DEF = 30;
+    EFFECT = ROOTED;
 }
 
 void PokeGrass::attackTo(Pokemon *target, Arena currentArena) {
-    if(!target->isRooted()){
-        target->setRooted(true);
-        target->setDamage();
-    }
+    applyEffect(EFFECT, target);
 }
 
 void PokeGrass::levelUp() {
-    HP += 80;
-    ATK += 4;
-    MAG_DEF += 0;
-    PHY_DEF += 3;
+    level ++;
+    getLevelBonus();
 }
 
 void PokeGrass::setRooted(bool rooted) {
     this->rooted = false;
 }
 
-void PokeGrass::setDamage() {
-    if(burning)
-        CUR_DAM = BURN_DAMAGE * 2;
-    else if(drowning)
-        CUR_DAM = DROWN_DAMAGE;
-    else if(electrified)
-        CUR_DAM = ELECTRIFY_DAMAGE;
+void PokeGrass::setEffDamage() {
+    if(burning){
+        CUR_EFF_DAM = BURN_DAMAGE * 2;
+        isDoubled = true;
+    }
+    else if(drowning){
+        CUR_EFF_DAM = DROWN_DAMAGE;
+        isDoubled = false;
+    }
+    else if(electrified){
+        CUR_EFF_DAM = ELECTRIFY_DAMAGE;
+        isDoubled = false;
+    }
 }
 
 void PokeGrass::Info() {
     std::cout << "[" << name << ", " << pokemonID << ", GRASS]" << std::endl;
+}
+
+void PokeGrass::getLevelBonus() {
+    HP += 80 * level;
+    ATK += 4 * level;
+    MAG_DEF += 0 * level;
+    PHY_DEF += 3 * level;
+}
+
+void PokeGrass::Reset() {
+    CUR_EFF_DAM = 0;
+    CUR_ATT_DAM = 0;
+    burning = false;
+    drowning = false;
+    electrified = false;
+    rooted = false;
+    dead = false;
+
+    HP = 800;
+    ATK = 40;
+    MAG_DEF = 0;
+    PHY_DEF = 30;
+
+    getLevelBonus();
+}
+
+void PokeGrass::setArenaEff(Arena arena) {
+    switch(arena)
+    {
+        case FOREST:
+            HP += 100; ATK += 10; arenaBuff = 1;
+            break;
+        case MAGMA:
+            HP -= 100; ATK -= 10; arenaBuff = -1;
+            break;
+        case SKY:
+            HP -= 100; ATK -= 10; arenaBuff = -1;
+            break;
+        case STADIUM:
+            arenaBuff = 0;
+    }
 }
 

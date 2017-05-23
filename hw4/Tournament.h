@@ -39,7 +39,7 @@ private:
 	int duelBetween(Pokemon *pokemon1, Pokemon *pokemon2, Arena currentArena);
 
 	// Own Attributes
-
+	std::vector<Trainer *> trainers;
 };
 
 #endif

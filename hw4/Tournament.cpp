@@ -7,16 +7,15 @@
 #include "Trainer.h"
 #include "Tournament.h"
 
-Tournament::Tournament(const std::string &tournamentName) {
-
-}
+Tournament::Tournament(const std::string &tournamentName)
+    : tournamentName(tournamentName) {}
 
 Tournament::~Tournament() {
 
 }
 
 void Tournament::registerTrainers(const std::vector<Trainer *> &trainers) {
-
+    this->trainers = trainers;
 }
 
 Trainer *Tournament::commence() {
@@ -28,9 +27,9 @@ int Tournament::duelBetween(Trainer *trainer1, Trainer *trainer2, Arena currentA
 }
 
 const std::string &Tournament::getTournamentName() const {
-    return <#initializer#>;
+    return tournamentName;
 }
 
 int Tournament::duelBetween(Pokemon *pokemon1, Pokemon *pokemon2, Arena currentArena) {
-    return 0;
+
 }

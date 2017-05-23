@@ -39,10 +39,18 @@ public:
 	virtual void setRooted(bool rooted);
 
 	// Own Methods
-    virtual void setDamage();
+    virtual void setEffDamage();
     virtual void Info() = 0;
+    virtual void Reset() = 0;
+    virtual void setArenaEff(Arena arena) = 0;
+    void setAttDamage(int damage);
+    void applyEffect(Effect effect, Pokemon* target);
+    bool isDead();
+    void updateDeadStatus();
 protected:
-	int pokemonID; 	// Unique
+    virtual void getLevelBonus() = 0;
+
+    int pokemonID; 	// Unique
 
 	std::string name;
 
@@ -57,7 +65,13 @@ protected:
 	bool rooted;
 
 	// Own Attributes
-	int CUR_DAM;
+	int CUR_EFF_DAM;
+    int CUR_ATT_DAM;
+    bool dead;
+    bool isDoubled;
+    int arenaBuff;
+    int level;
+    Effect EFFECT;
 };
 
 #endif

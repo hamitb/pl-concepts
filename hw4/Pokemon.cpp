@@ -9,11 +9,14 @@ Pokemon::Pokemon(int pokemonID, const std::string &name) {
     this->pokemonID = pokemonID;
     this->name = name;
 
-    CUR_DAM = 0;
+    CUR_EFF_DAM = 0;
     burning = false;
     drowning = false;
     electrified = false;
     rooted = false;
+    dead = false;
+
+    level = 0;
 }
 
 Pokemon::~Pokemon() {
@@ -76,6 +79,48 @@ void Pokemon::setRooted(bool rooted) {
     this->rooted = rooted;
 }
 
-void Pokemon::setDamage() {
-    CUR_DAM = 0;
+void Pokemon::setEffDamage() {
+    CUR_EFF_DAM = 0;
+}
+
+bool Pokemon::isDead() {
+    return dead;
+}
+
+void Pokemon::updateDeadStatus() {
+    if(!dead)
+        dead = HP <= 0;
+}
+
+void Pokemon::setAttDamage(int damage) {
+    CUR_ATT_DAM = damage;
+}
+
+void Pokemon::applyEffect(Effect effect, Pokemon* target) {
+    switch(effect){
+        case BURNING:
+            if(!target->isBurning()){
+                target->setBurning(true);
+                target->setEffDamage();
+            }
+            break;
+        case DROWNING:
+            if(!target->isDrowning()){
+                target->setDrowning(true);
+                target->setEffDamage();
+            }
+            break;
+        case ELECTRIFIED:
+            if(!target->isElectrified()) {
+                target->setElectrified(true);
+                target->setEffDamage();
+            }
+            break;
+        case ROOTED:
+            if(!target->isRooted()){
+                target->setRooted(true);
+                target->setEffDamage();
+            }
+            break;
+    }
 }
