@@ -9,7 +9,7 @@
 #include "Trainer.h"
 
 Trainer::Trainer(int trainerID, const std::string &name, Arena favoriteArena, std::vector<Pokemon *> &pokemons)
-    : name(name), trainerID(trainerID){ this->favoriteArena = favoriteArena; this->pokemons = pokemons; }
+    : name(name), trainerID(trainerID) {this->favoriteArena = favoriteArena; this->pokemons = pokemons; }
 
 Trainer::~Trainer() {
     for(int i = 0; i < pokemons.size(); i++) {
@@ -32,8 +32,8 @@ Arena Trainer::getFavoriteArena() const {
 
 void Trainer::Info() {
     std::cout << "**" << trainerID << ", " << name << ", " << favoriteArena << "**" << std::endl;
-    for(int i = 0; i < duelPokemons.size(); i ++) {
-        duelPokemons[i]->Info();
+    for(int i = 0; i < pokemons.size(); i ++) {
+        pokemons[i]->Info();
     }
 }
 
@@ -51,5 +51,11 @@ Pokemon* Trainer::getNewDP() {
 
 int Trainer::getDPCount() {
     return (int)duelPokemons.size();
+}
+
+void Trainer::resetPokemons() {
+    for(int i = 0; i < pokemons.size(); i ++) {
+        pokemons[i]->Reset();
+    }
 }
 

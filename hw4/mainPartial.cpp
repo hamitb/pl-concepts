@@ -38,7 +38,7 @@ bool DuelTest() {
     Tournament aTournament("sample tournament");
     std::vector<Trainer *> trainers = newCenter.getAllTrainers();
 
-    aTournament.duelBetween(trainers[0], trainers[1], FOREST);
+    std::cout << aTournament.getWinnerTrainer(trainers[0], trainers[1]) << std::endl;
 
     return true;
 }

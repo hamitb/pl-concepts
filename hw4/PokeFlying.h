@@ -20,7 +20,8 @@ public:
     void setEffected(bool effected);
 protected:
 	// Add your protected methods/attributes here.
-    virtual void getLevelBonus();
+    void getLevelBonus();
+    void resetLevelBonus();
 private:
 	// Add your private methods/attributes here.
 	

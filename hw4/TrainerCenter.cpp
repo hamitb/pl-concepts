@@ -105,6 +105,7 @@ Pokemon *TrainerCenter::parsePokemon(std::string line) {
     strcpy(cstr, line.c_str());
 
     sscanf(cstr, "%d %s %s", &id, name, type);
+
     if(strncmp(type,"FIRE", strlen(type)) == 0)
         pokemon = new PokeFire(id, name);
     else if(strncmp(type,"WATER", strlen(type)) == 0)
@@ -144,17 +145,16 @@ Trainer *TrainerCenter::parseTrainer(std::string line, std::vector<Pokemon*> pok
 
     if(strncmp(favAreaS,"Sky", strlen(favAreaS)) == 0)
         favArea = SKY;
-    else if(strncmp(name,"Magma", strlen(favAreaS)) == 0)
+    else if(strncmp(favAreaS,"Magma", strlen(favAreaS)) == 0)
         favArea = MAGMA;
-    else if(strncmp(name,"Ocean", strlen(favAreaS)) == 0)
+    else if(strncmp(favAreaS,"Ocean", strlen(favAreaS)) == 0)
         favArea = OCEAN;
-    else if(strncmp(name,"ElectriCity", strlen(favAreaS)) == 0)
+    else if(strncmp(favAreaS,"ElectriCity", strlen(favAreaS)) == 0)
         favArea = ELECTRICITY;
-    else if(strncmp(name,"Forest", strlen(favAreaS)) == 0)
+    else if(strncmp(favAreaS,"Forest", strlen(favAreaS)) == 0)
         favArea = FOREST;
     else
         favArea = STADIUM;
-
 
 
     trainer = new Trainer(id, name, favArea, pokemons);

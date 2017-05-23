@@ -25,8 +25,6 @@ Trainer *Tournament::commence() {
 }
 
 int Tournament::duelBetween(Trainer *trainer1, Trainer *trainer2, Arena currentArena) {
-    int t1Score = 0;
-    int t2Score = 0;
     int lastWinner = 2;
     int winnerTrainer;
     std::string winnerName;
@@ -85,7 +83,10 @@ int Tournament::duelBetween(Trainer *trainer1, Trainer *trainer2, Arena currentA
 
     winnerTrainer = trainer1->getDPCount() != 0 ? 1 : -1;
     winnerName = winnerTrainer == 1 ? trainer1->getName() : trainer2->getName();
-    std::cout << "    " << "WinnerT" << winnerName << std::endl;
+    std::cout << "    " << "WinnerT" << winnerName << std::endl << std::endl;
+
+    trainer1->resetPokemons();
+    trainer2->resetPokemons();
 
     return winnerTrainer;
 }
@@ -191,6 +192,20 @@ int Tournament::checkWinner(Pokemon *pokemon1, Pokemon *pokemon2) {
         return 1;
     else
         return 0;
+}
+
+int Tournament::getWinnerTrainer(Trainer *trainer1, Trainer *trainer2) {
+    int result = 0;
+    std::string winnerName;
+
+    result += duelBetween(trainer1, trainer2, trainer1->getFavoriteArena());
+    result += duelBetween(trainer2, trainer1, trainer2->getFavoriteArena());
+    result += duelBetween(trainer1, trainer2, STADIUM);
+
+    winnerName = result > 0 ? trainer1->getName() : trainer2->getName();
+
+    std::cout << "Round Winner: " << winnerName << "!" << std::endl;
+    return result;
 }
 
 

@@ -74,18 +74,25 @@ void PokeWater::Reset() {
     MAG_DEF = 10;
     PHY_DEF = 20;
 
-    getLevelBonus();
+    resetLevelBonus();
 }
 
 void PokeWater::Info() {
     std::cout << "[" << name << ", " << pokemonID << ", WATER]" << std::endl;
 }
 
-void PokeWater::getLevelBonus() {
+void PokeWater::resetLevelBonus() {
     HP += 70 * level;
     ATK += 5 * level;
     MAG_DEF += 1 * level;
     PHY_DEF += 2 * level;
+}
+
+void PokeWater::getLevelBonus() {
+    HP += 70;
+    ATK += 5;
+    MAG_DEF += 1;
+    PHY_DEF += 2;
 }
 
 void PokeWater::setArenaEff(Arena arena) {

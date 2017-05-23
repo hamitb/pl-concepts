@@ -77,10 +77,17 @@ void PokeElectric::Reset() {
     MAG_DEF = 30;
     PHY_DEF = 0;
 
-    getLevelBonus();
+    resetLevelBonus();
 }
 
 void PokeElectric::getLevelBonus() {
+    HP += 50;
+    ATK += 7;
+    MAG_DEF += 3;
+    PHY_DEF += 0;
+}
+
+void PokeElectric::resetLevelBonus() {
     HP += 50 * level;
     ATK += 7 * level;
     MAG_DEF += 3 * level;

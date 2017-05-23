@@ -93,14 +93,21 @@ void PokeFire::Reset() {
     MAG_DEF = 20;
     PHY_DEF = 10;
 
-    getLevelBonus();
+    resetLevelBonus();
 }
 
-void PokeFire::getLevelBonus() {
+void PokeFire::resetLevelBonus() {
     HP += 60 * level;
     ATK += 6 * level;
     MAG_DEF += 2 * level;
     PHY_DEF += 1 * level;
+}
+
+void PokeFire::getLevelBonus() {
+    HP += 60;
+    ATK += 6;
+    MAG_DEF += 2;
+    PHY_DEF += 1;
 }
 
 void PokeFire::setArenaEff(Arena arena) {

@@ -23,6 +23,7 @@ void PokeFlying::attackTo(Pokemon *target, Arena currentArena) {
 
 void PokeFlying::levelUp() {
     level ++;
+
     getLevelBonus();
 }
 
@@ -70,10 +71,17 @@ void PokeFlying::Reset() {
     MAG_DEF = 0;
     PHY_DEF = 15;
 
-    getLevelBonus();
+    resetLevelBonus();
 }
 
 void PokeFlying::getLevelBonus() {
+    HP += 65 ;
+    ATK += 5;
+    MAG_DEF += 0;
+    PHY_DEF += 3;
+}
+
+void PokeFlying::resetLevelBonus() {
     HP += 65 * level;
     ATK += 5 * level;
     MAG_DEF += 0 * level;

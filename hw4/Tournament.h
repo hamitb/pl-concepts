@@ -29,6 +29,7 @@ public:
     const std::string& getTournamentName() const;
 
 	// Own Methods
+	int getWinnerTrainer(Trainer* trainer1, Trainer* trainer2);
 
 private:
 	int checkWinner(Pokemon *pokemon1, Pokemon *pokemon2);
@@ -39,7 +40,6 @@ private:
 	// Return -1 if Pokemon2 wins.
 	// It won't (can't) be called from main.cpp, this method is for your own convenience.
 	int duelBetween(Pokemon *pokemon1, Pokemon *pokemon2, Arena currentArena);
-
 	// Own Attributes
 	std::vector<Trainer *> trainers;
 };

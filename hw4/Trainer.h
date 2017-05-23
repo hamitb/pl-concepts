@@ -22,6 +22,7 @@ public:
 	// Own Methods
     void Info();
 	void resetDP();
+	void resetPokemons();
 	void replaceDP();
 	Pokemon* getNewDP();
 	int getDPCount();

@@ -18,7 +18,8 @@ protected:
 	// Add your protected methods/attributes here.
     void setEffDamage(Effect effect);
     void updateEffDamage();
-    virtual void getLevelBonus();
+    void getLevelBonus();
+    void resetLevelBonus();
 private:
 	// Add your private methods/attributes here.
 	

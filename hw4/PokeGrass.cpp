@@ -53,11 +53,18 @@ void PokeGrass::Info() {
     std::cout << "[" << name << ", " << pokemonID << ", GRASS]" << std::endl;
 }
 
-void PokeGrass::getLevelBonus() {
+void PokeGrass::resetLevelBonus() {
     HP += 80 * level;
     ATK += 4 * level;
     MAG_DEF += 0 * level;
     PHY_DEF += 3 * level;
+}
+
+void PokeGrass::getLevelBonus() {
+    HP += 80;
+    ATK += 4;
+    MAG_DEF += 0;
+    PHY_DEF += 3;
 }
 
 void PokeGrass::Reset() {
@@ -83,7 +90,7 @@ void PokeGrass::Reset() {
     MAG_DEF = 0;
     PHY_DEF = 30;
 
-    getLevelBonus();
+    resetLevelBonus();
 }
 
 void PokeGrass::setArenaEff(Arena arena) {
