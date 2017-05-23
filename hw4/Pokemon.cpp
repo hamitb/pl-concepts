@@ -10,7 +10,11 @@ Pokemon::Pokemon(int pokemonID, const std::string &name) {
     this->pokemonID = pokemonID;
     this->name = name;
 
-    CUR_EFF_DAM = 0;
+    CUR_BRN_DAM = 0;
+    CUR_DRW_DAM = 0;
+    CUR_ELC_DAM = 0;
+    CUR_RTD_DAM = 0;
+    CUR_ATT_DAM = 0;
     burning = false;
     drowning = false;
     electrified = false;
@@ -20,7 +24,6 @@ Pokemon::Pokemon(int pokemonID, const std::string &name) {
     level = 0;
     effected = false;
     arenaEffected = false;
-    effectStatus = "";
 }
 
 Pokemon::~Pokemon() {
@@ -83,8 +86,12 @@ void Pokemon::setRooted(bool rooted) {
     this->rooted = rooted;
 }
 
-void Pokemon::setEffDamage() {
-    CUR_EFF_DAM = 0;
+void Pokemon::setEffDamage(Effect effect) {
+    CUR_BRN_DAM = 0;
+    CUR_DRW_DAM = 0;
+    CUR_ELC_DAM = 0;
+    CUR_RTD_DAM = 0;
+    CUR_ATT_DAM = 0;
 }
 
 bool Pokemon::isDead() {
@@ -101,41 +108,34 @@ void Pokemon::setAttDamage(int damage) {
 }
 
 void Pokemon::applyEffect(Effect effect, Pokemon* target) {
-
-    if(!target->isEfected()){
-        switch(effect){
-            case BURNING:
-                if(!target->isBurning()){
-                    target->setBurning(true);
-                    target->setEffDamage();
-                    target->effectStatus = "burning";
-                }
-                break;
-            case DROWNING:
-                if(!target->isDrowning()){
-                    target->setDrowning(true);
-                    target->setEffDamage();
-                    target->effectStatus = "drowning";
-                }
-                break;
-            case ELECTRIFIED:
-                if(!target->isElectrified()) {
-                    target->setElectrified(true);
-                    target->setEffDamage();
-                    target->effectStatus = "electrified";
-                }
-                break;
-            case ROOTED:
-                if(!target->isRooted()){
-                    target->setRooted(true);
-                    target->setEffDamage();
-                    target->effectStatus = "rooted";
-                }
-                break;
-        }
+     switch(effect){
+        case BURNING:
+            if(!target->isBurning()){
+                target->setBurning(true);
+                target->setEffDamage(effect);
+            }
+            break;
+        case DROWNING:
+            if(!target->isDrowning()){
+                target->setDrowning(true);
+                target->setEffDamage(effect);
+            }
+            break;
+        case ELECTRIFIED:
+            if(!target->isElectrified()) {
+                target->setElectrified(true);
+                target->setEffDamage(effect);
+            }
+            break;
+        case ROOTED:
+            if(!target->isRooted()){
+                target->setRooted(true);
+                target->setEffDamage(effect);
+            }
+            break;
+     }
 
         target->setEffected(true);
-    }
 }
 
 int Pokemon::getAttDamage() {
@@ -143,8 +143,24 @@ int Pokemon::getAttDamage() {
     updateDeadStatus();
 }
 
-int Pokemon::getEffDamage() {
-    HP = std::max(HP - CUR_EFF_DAM, 0);
+void Pokemon::getEffDamage(Effect effect) {
+    if(burning){
+        std::cout << "            " << getName() << "(" << getHP() << ")" << Helpers::getEffectName(effect) << getEffIntensity(effect) << std::endl;
+        HP = std::max(HP - CUR_BRN_DAM, 0);
+    }
+    else if(drowning){
+        std::cout << "            " << getName() << "(" << getHP() << ")" << Helpers::getEffectName(effect) << getEffIntensity(effect) << std::endl;
+        HP = std::max(HP - CUR_DRW_DAM, 0);
+    }
+    else if(electrified){
+        std::cout << "            " << getName() << "(" << getHP() << ")" << Helpers::getEffectName(effect) << getEffIntensity(effect) << std::endl;
+        HP = std::max(HP - CUR_ELC_DAM, 0);
+    }
+    else if(rooted){
+        std::cout << "            " << getName() << "(" << getHP() << ")" << Helpers::getEffectName(effect) << getEffIntensity(effect) << std::endl;
+        HP = std::max(HP - CUR_RTD_DAM, 0);
+    }
+
     updateDeadStatus();
 }
 
@@ -164,14 +180,23 @@ bool Pokemon::isArenaEffected() {
     return arenaEffected;
 }
 
-std::string Pokemon::getEffStatus() {
-    return effectStatus;
-}
-
-std::string Pokemon::getEffIntensity() {
-    return effectIntensity;
+std::string Pokemon::getEffIntensity(Effect effect) {
+    switch(effect) {
+        case BURNING:
+            return effectIntensity_BRN;
+        case DROWNING:
+            return effectIntensity_DRW;
+        case ELECTRIFIED:
+            return effectIntensity_ELC;
+        case ROOTED:
+            return effectIntensity_RTD;
+    }
 }
 
 void Pokemon::setEffected(bool effected) {
     this->effected = effected;
+}
+
+void Pokemon::updateEffDamage() {
+
 }

@@ -32,18 +32,20 @@ void PokeGrass::setRooted(bool rooted) {
     this->rooted = false;
 }
 
-void PokeGrass::setEffDamage() {
-    if(burning){
-        CUR_EFF_DAM = std::max(0, BURN_DAMAGE * 2 - MAG_DEF);
-        effectIntensity = "!!!!";
-    }
-    else if(drowning){
-        CUR_EFF_DAM = std::max(0, DROWN_DAMAGE - MAG_DEF);
-        effectIntensity = "!!";
-    }
-    else if(electrified){
-        CUR_EFF_DAM = std::max(0, ELECTRIFY_DAMAGE - MAG_DEF);
-        effectIntensity = "!!";
+void PokeGrass::setEffDamage(Effect effect) {
+    switch(effect){
+        case BURNING:
+            CUR_BRN_DAM = std::max(0, BURN_DAMAGE * 2 - MAG_DEF);
+            effectIntensity_DRW = "!!!!";
+            break;
+        case DROWNING:
+            CUR_DRW_DAM = std::max(0, DROWN_DAMAGE - MAG_DEF);
+            effectIntensity_ELC = "!!";
+            break;
+        case ELECTRIFIED:
+            CUR_ELC_DAM = std::max(0, ELECTRIFY_DAMAGE - MAG_DEF);
+            effectIntensity_RTD = "!!";
+            break;
     }
 }
 
@@ -59,17 +61,22 @@ void PokeGrass::getLevelBonus() {
 }
 
 void PokeGrass::Reset() {
-    CUR_EFF_DAM = 0;
+    CUR_BRN_DAM = 0;
+    CUR_DRW_DAM = 0;
+    CUR_ELC_DAM = 0;
+    CUR_RTD_DAM = 0;
     CUR_ATT_DAM = 0;
     burning = false;
     drowning = false;
     electrified = false;
     rooted = false;
     dead = false;
-    effectIntensity = "";
     effected = false;
     arenaEffected = false;
-    effectStatus = "";
+    effectIntensity_BRN = "";
+    effectIntensity_DRW = "";
+    effectIntensity_ELC = "";
+    effectIntensity_RTD = "";
 
     HP = 800;
     ATK = 40;
@@ -80,21 +87,38 @@ void PokeGrass::Reset() {
 }
 
 void PokeGrass::setArenaEff(Arena arena) {
-    switch(arena)
-    {
-        case FOREST:
-            HP += 100; ATK += 10; arenaBuff = '+';
-            break;
-        case MAGMA:
-            HP -= 100; ATK -= 10; arenaBuff = '-';
-            break;
-        case SKY:
-            HP -= 100; ATK -= 10; arenaBuff = '-';
-            break;
-        default:
-            arenaBuff = '/';
-    }
+    if(!isArenaEffected()) {
+        switch(arena)
+        {
+            case FOREST:
+                HP += 100; ATK += 10; arenaBuff = '+';
+                break;
+            case MAGMA:
+                HP -= 100; ATK -= 10; arenaBuff = '-';
+                break;
+            case SKY:
+                HP -= 100; ATK -= 10; arenaBuff = '-';
+                break;
+            default:
+                arenaBuff = '/';
+        }
 
-    arenaEffected = true;
+        arenaEffected = true;
+    }
+}
+
+void PokeGrass::updateEffDamage() {
+    if (isBurning()){
+        CUR_BRN_DAM = std::max(0, BURN_DAMAGE * 2 - MAG_DEF);
+        effectIntensity_DRW = "!!!!";
+    }
+    if(isDrowning()){
+        CUR_DRW_DAM = std::max(0, DROWN_DAMAGE - MAG_DEF);
+        effectIntensity_ELC = "!!";
+    }
+    if(isElectrified()) {
+        CUR_ELC_DAM = std::max(0, ELECTRIFY_DAMAGE - MAG_DEF);
+        effectIntensity_RTD = "!!";
+    }
 }
 

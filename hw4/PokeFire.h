@@ -16,7 +16,8 @@ public:
     void setArenaEff(Arena arena);
 protected:
     // Add your protected methods/attributes here.
-    void setEffDamage();
+    void setEffDamage(Effect effect);
+    void updateEffDamage();
     virtual void getLevelBonus();
 
 private:

@@ -33,34 +33,40 @@ void PokeWater::setDrowning(bool drowning){
     this->drowning = false;
 }
 
-void PokeWater::setEffDamage() {
-    if(electrified){
-        CUR_EFF_DAM = std::max(0, ELECTRIFY_DAMAGE * 2 - MAG_DEF);
-
-        effectIntensity = "!!!!";
-    }
-    else if(burning){
-        CUR_EFF_DAM = std::max(0, BURN_DAMAGE - MAG_DEF);
-        effectIntensity = "!!";
-    }
-    else if(rooted){
-        CUR_EFF_DAM = std::max(0, ROOT_DAMAGE - MAG_DEF);
-        effectIntensity = "!!";
+void PokeWater::setEffDamage(Effect effect) {
+    switch(effect){
+        case ELECTRIFIED:
+            CUR_ELC_DAM = std::max(0, ELECTRIFY_DAMAGE * 2 - MAG_DEF);
+            effectIntensity_DRW = "!!!!";
+            break;
+        case BURNING:
+            CUR_BRN_DAM = std::max(0, BURN_DAMAGE - MAG_DEF);
+            effectIntensity_ELC = "!!";
+            break;
+        case ROOTED:
+            CUR_RTD_DAM = std::max(0, ROOT_DAMAGE - MAG_DEF);
+            effectIntensity_RTD = "!!";
+            break;
     }
 }
 
 void PokeWater::Reset() {
-    CUR_EFF_DAM = 0;
+    CUR_BRN_DAM = 0;
+    CUR_DRW_DAM = 0;
+    CUR_ELC_DAM = 0;
+    CUR_RTD_DAM = 0;
     CUR_ATT_DAM = 0;
     burning = false;
     drowning = false;
     electrified = false;
     rooted = false;
     dead = false;
-    effectIntensity = "";
     effected = false;
     arenaEffected = false;
-    effectStatus = "";
+    effectIntensity_BRN = "";
+    effectIntensity_DRW = "";
+    effectIntensity_ELC = "";
+    effectIntensity_RTD = "";
 
 
     HP = 700;
@@ -83,21 +89,39 @@ void PokeWater::getLevelBonus() {
 }
 
 void PokeWater::setArenaEff(Arena arena) {
-    switch(arena)
-    {
-        case OCEAN:
-            HP += 100; ATK += 10; arenaBuff = '+';
-            break;
-        case ELECTRICITY:
-            HP -= 100; ATK -= 10; arenaBuff = '-';
-            break;
-        case FOREST:
-            HP -= 100; ATK -= 10; arenaBuff = '-';
-            break;
-        default:
-            arenaBuff = '/';
+    if(!isArenaEffected()) {
+        switch(arena)
+        {
+            case OCEAN:
+                HP += 100; ATK += 10; arenaBuff = '+';
+                break;
+            case ELECTRICITY:
+                HP -= 100; ATK -= 10; arenaBuff = '-';
+                break;
+            case FOREST:
+                HP -= 100; ATK -= 10; arenaBuff = '-';
+                break;
+            default:
+                arenaBuff = '/';
+        }
+
+        arenaEffected = true;
     }
 
-    arenaEffected = true;
+}
+
+void PokeWater::updateEffDamage() {
+    if (isElectrified()){
+        CUR_ELC_DAM = std::max(0, ELECTRIFY_DAMAGE * 2 - MAG_DEF);
+        effectIntensity_DRW = "!!!!";
+    }
+    if(isBurning()){
+        CUR_BRN_DAM = std::max(0, BURN_DAMAGE - MAG_DEF);
+        effectIntensity_ELC = "!!";
+    }
+    if(isRooted()) {
+        CUR_RTD_DAM = std::max(0, ROOT_DAMAGE - MAG_DEF);
+        effectIntensity_RTD = "!!";
+    }
 }
 

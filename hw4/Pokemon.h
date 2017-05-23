@@ -39,7 +39,8 @@ public:
 	virtual void setRooted(bool rooted);
 
 	// Own Methods
-    virtual void setEffDamage();
+    virtual void setEffDamage(Effect effect);
+    virtual void updateEffDamage();
     virtual void setEffected(bool effected);
     virtual void Info() = 0;
     virtual void Reset() = 0;
@@ -47,14 +48,13 @@ public:
     void setAttDamage(int damage);
     char getArenaEff();
     int getAttDamage();
-    int getEffDamage();
+    void getEffDamage(Effect effect);
     bool isEfected();
 	bool isArenaEffected();
     void applyEffect(Effect effect, Pokemon* target);
     int calculateDamage(Pokemon *target);
     bool isDead();
-	std::string getEffIntensity();
-	std::string getEffStatus();
+	std::string getEffIntensity(Effect effect);
 protected:
     virtual void getLevelBonus() = 0;
     void updateDeadStatus();
@@ -73,15 +73,21 @@ protected:
 	bool rooted;
 
 	// Own Attributes
-	int CUR_EFF_DAM;
+    int CUR_BRN_DAM;
+    int CUR_DRW_DAM;
+    int CUR_ELC_DAM;
+    int CUR_RTD_DAM;
+
     int CUR_ATT_DAM;
     bool dead;
     bool effected;
 	bool arenaEffected;
     char arenaBuff;
     int level;
-    std::string effectIntensity;
-	std::string effectStatus;
+    std::string effectIntensity_BRN;
+    std::string effectIntensity_DRW;
+    std::string effectIntensity_ELC;
+    std::string effectIntensity_RTD;
     Effect EFFECT;
 };
 

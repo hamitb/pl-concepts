@@ -7,17 +7,18 @@
 #include "Tournament.h"
 
 #include <iostream>
+#include <vector>
 
 bool attributeTest();
 bool effectTest();
 bool trainerCenterTest();
-bool pokeDuelTest();
+bool DuelTest();
 
 void introduceYourself(Pokemon *pokemon);
 
 int main(int argc, char** argv)
 {
-	if(!attributeTest() || !effectTest() || !pokeDuelTest()) // || aTest() || anotherTest() ...
+	if(!attributeTest() || !effectTest() || !DuelTest()) // || aTest() || anotherTest() ...
 	{
 		return -1;
 	}
@@ -32,19 +33,16 @@ bool trainerCenterTest() {
     return true;
 }
 
-bool pokeDuelTest() {
-    PokeFire fire(0, "Charmander");
-    PokeWater water(1, "Psyduck");
-    PokeElectric electric(2, "Pikachu");
-    PokeGrass grass(3, "Bulbasaur");
-    PokeFlying flying(4, "Zapdos");
-
+bool DuelTest() {
+    TrainerCenter newCenter("2Trainers.txt");
     Tournament aTournament("sample tournament");
+    std::vector<Trainer *> trainers = newCenter.getAllTrainers();
 
-    aTournament.duelBetween(&flying, &water, SKY);
+    aTournament.duelBetween(trainers[0], trainers[1], FOREST);
 
     return true;
 }
+
 
 bool attributeTest()
 {

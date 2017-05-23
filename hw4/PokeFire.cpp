@@ -33,19 +33,37 @@ void PokeFire::setBurning(bool burning){
     this->burning = false;
 }
 
-void PokeFire::setEffDamage() {
-    if(drowning){
-        CUR_EFF_DAM = std::max(0, DROWN_DAMAGE * 2 - MAG_DEF);
-        effectIntensity = "!!!!";
+void PokeFire::setEffDamage(Effect effect) {
+    switch(effect){
+        case DROWNING:
+            CUR_DRW_DAM = std::max(0, DROWN_DAMAGE * 2 - MAG_DEF);
+            effectIntensity_DRW = "!!!!";
+            break;
+        case ELECTRIFIED:
+            CUR_ELC_DAM = std::max(0, ELECTRIFY_DAMAGE - MAG_DEF);
+            effectIntensity_ELC = "!!";
+            break;
+        case ROOTED:
+            CUR_RTD_DAM = std::max(0, ROOT_DAMAGE - MAG_DEF);
+            effectIntensity_RTD = "!!";
+            break;
     }
-    else if(electrified){
-        CUR_EFF_DAM = std::max(0, ELECTRIFY_DAMAGE - MAG_DEF);
-        effectIntensity = "!!";
-    }
-    else if(rooted){
-        CUR_EFF_DAM = std::max(0, ROOT_DAMAGE - MAG_DEF);
-        effectIntensity = "!!";
-    }
+}
+
+void PokeFire::updateEffDamage() {
+        if (isDrowning()){
+            CUR_DRW_DAM = std::max(0, DROWN_DAMAGE * 2 - MAG_DEF);
+            effectIntensity_DRW = "!!!!";
+        }
+        if(isElectrified()){
+            CUR_ELC_DAM = std::max(0, ELECTRIFY_DAMAGE - MAG_DEF);
+            effectIntensity_ELC = "!!";
+        }
+        if(isRooted()) {
+            CUR_RTD_DAM = std::max(0, ROOT_DAMAGE - MAG_DEF);
+            effectIntensity_RTD = "!!";
+        }
+
 }
 
 void PokeFire::Info() {
@@ -53,7 +71,10 @@ void PokeFire::Info() {
 }
 
 void PokeFire::Reset() {
-    CUR_EFF_DAM = 0;
+    CUR_BRN_DAM = 0;
+    CUR_DRW_DAM = 0;
+    CUR_ELC_DAM = 0;
+    CUR_RTD_DAM = 0;
     CUR_ATT_DAM = 0;
     burning = false;
     drowning = false;
@@ -62,8 +83,10 @@ void PokeFire::Reset() {
     dead = false;
     effected = false;
     arenaEffected = false;
-    effectIntensity = "";
-    effectStatus = "";
+    effectIntensity_BRN = "";
+    effectIntensity_DRW = "";
+    effectIntensity_ELC = "";
+    effectIntensity_RTD = "";
 
     HP = 600;
     ATK = 60;
@@ -81,20 +104,22 @@ void PokeFire::getLevelBonus() {
 }
 
 void PokeFire::setArenaEff(Arena arena) {
-    switch(arena)
-    {
-        case MAGMA:
-            HP += 100; ATK += 10; arenaBuff = '+';
-            break;
-        case OCEAN:
-            HP -= 100; ATK -= 10; arenaBuff = '-';
-            break;
-        case SKY:
-            HP -= 100; ATK -= 10; arenaBuff = '-';
-            break;
-        default:
-            arenaBuff = '/';
-    }
+    if(!isArenaEffected()) {
+        switch(arena)
+        {
+            case MAGMA:
+                HP += 100; ATK += 10; arenaBuff = '+';
+                break;
+            case OCEAN:
+                HP -= 100; ATK -= 10; arenaBuff = '-';
+                break;
+            case SKY:
+                HP -= 100; ATK -= 10; arenaBuff = '-';
+                break;
+            default:
+                arenaBuff = '/';
+        }
 
-    arenaEffected = true;
+        arenaEffected = true;
+    }
 }

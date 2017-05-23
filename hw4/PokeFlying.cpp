@@ -13,8 +13,6 @@ PokeFlying::PokeFlying(int pokemonID, const std::string &name) : Pokemon(pokemon
     MAG_DEF = 0;
     PHY_DEF = 15;
     EFFECT = NOTHING;
-
-    effectIntensity = "";
 }
 
 void PokeFlying::attackTo(Pokemon *target, Arena currentArena) {
@@ -49,17 +47,22 @@ void PokeFlying::Info() {
 }
 
 void PokeFlying::Reset() {
-    CUR_EFF_DAM = 0;
+    CUR_BRN_DAM = 0;
+    CUR_DRW_DAM = 0;
+    CUR_ELC_DAM = 0;
+    CUR_RTD_DAM = 0;
     CUR_ATT_DAM = 0;
     burning = false;
     drowning = false;
     electrified = false;
     rooted = false;
     dead = false;
-    effectIntensity = "";
     effected = false;
     arenaEffected = false;
-    effectStatus = "";
+    effectIntensity_BRN = "";
+    effectIntensity_DRW = "";
+    effectIntensity_ELC = "";
+    effectIntensity_RTD = "";
 
 
     HP = 650;
@@ -78,22 +81,24 @@ void PokeFlying::getLevelBonus() {
 }
 
 void PokeFlying::setArenaEff(Arena arena) {
-    switch(arena)
-    {
-        case SKY:
-            HP += 100; ATK += 10; arenaBuff = '+';
-            break;
-        case OCEAN:
-            HP -= 100; ATK -= 10; arenaBuff = '-';
-            break;
-        case ELECTRICITY:
-            HP -= 100; ATK -= 10; arenaBuff = '-';
-            break;
-        case STADIUM:
-            arenaBuff = '/';
-    }
+    if(!isArenaEffected()) {
+        switch(arena)
+        {
+            case SKY:
+                HP += 100; ATK += 10; arenaBuff = '+';
+                break;
+            case OCEAN:
+                HP -= 100; ATK -= 10; arenaBuff = '-';
+                break;
+            case ELECTRICITY:
+                HP -= 100; ATK -= 10; arenaBuff = '-';
+                break;
+            default:
+                arenaBuff = '/';
+        }
 
-    arenaEffected = true;
+        arenaEffected = true;
+    }
 }
 
 void PokeFlying::setEffected(bool effected) {

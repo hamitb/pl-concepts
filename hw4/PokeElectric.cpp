@@ -32,18 +32,20 @@ void PokeElectric::setElectrified(bool electrified) {
     this->electrified = false;
 }
 
-void PokeElectric::setEffDamage() {
-    if(rooted){
-        CUR_EFF_DAM = std::max(0, ROOT_DAMAGE * 2 - MAG_DEF);
-        effectIntensity = "!!!!";
-    }
-    else if(burning){
-        CUR_EFF_DAM = std::max(0, BURN_DAMAGE - MAG_DEF);
-        effectIntensity = "!!";
-    }
-    else if(drowning){
-        CUR_EFF_DAM = std::max(0, DROWN_DAMAGE - MAG_DEF);
-        effectIntensity = "!!";
+void PokeElectric::setEffDamage(Effect effect) {
+    switch(effect){
+        case ROOTED:
+            CUR_RTD_DAM = std::max(0, ROOT_DAMAGE * 2 - MAG_DEF);
+            effectIntensity_DRW = "!!!!";
+            break;
+        case BURNING:
+            CUR_BRN_DAM = std::max(0, BURN_DAMAGE - MAG_DEF);
+            effectIntensity_ELC = "!!";
+            break;
+        case DROWNING:
+            CUR_DRW_DAM = std::max(0, DROWN_DAMAGE - MAG_DEF);
+            effectIntensity_RTD = "!!";
+            break;
     }
 }
 
@@ -52,17 +54,22 @@ void PokeElectric::Info() {
 }
 
 void PokeElectric::Reset() {
-    CUR_EFF_DAM = 0;
+    CUR_BRN_DAM = 0;
+    CUR_DRW_DAM = 0;
+    CUR_ELC_DAM = 0;
+    CUR_RTD_DAM = 0;
     CUR_ATT_DAM = 0;
     burning = false;
     drowning = false;
     electrified = false;
     rooted = false;
     dead = false;
-    effectIntensity = "";
     effected = false;
     arenaEffected = false;
-    effectStatus = "";
+    effectIntensity_BRN = "";
+    effectIntensity_DRW = "";
+    effectIntensity_ELC = "";
+    effectIntensity_RTD = "";
 
 
     HP = 500;
@@ -81,20 +88,37 @@ void PokeElectric::getLevelBonus() {
 }
 
 void PokeElectric::setArenaEff(Arena arena) {
-    switch(arena)
-    {
-        case ELECTRICITY:
-            HP += 100; ATK += 10; arenaBuff = '+';
-            break;
-        case MAGMA:
-            HP -= 100; ATK -= 10; arenaBuff = '-';
-            break;
-        case FOREST:
-            HP -= 100; ATK -= 10; arenaBuff = '-';
-            break;
-        case STADIUM:
-            arenaBuff = '/';
-    }
+    if(!isArenaEffected()) {
+        switch(arena)
+        {
+            case ELECTRICITY:
+                HP += 100; ATK += 10; arenaBuff = '+';
+                break;
+            case MAGMA:
+                HP -= 100; ATK -= 10; arenaBuff = '-';
+                break;
+            case FOREST:
+                HP -= 100; ATK -= 10; arenaBuff = '-';
+                break;
+            default:
+                arenaBuff = '/';
+        }
 
-    arenaEffected = true;
+        arenaEffected = true;
+    }
+}
+
+void PokeElectric::updateEffDamage() {
+    if (isRooted()){
+        CUR_RTD_DAM = std::max(0, ROOT_DAMAGE * 2 - MAG_DEF);
+        effectIntensity_DRW = "!!!!";
+    }
+    if(isBurning()){
+        CUR_BRN_DAM = std::max(0, BURN_DAMAGE - MAG_DEF);
+        effectIntensity_ELC = "!!";
+    }
+    if(isRooted()) {
+        CUR_DRW_DAM = std::max(0, DROWN_DAMAGE - MAG_DEF);
+        effectIntensity_RTD = "!!";
+    }
 }

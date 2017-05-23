@@ -32,7 +32,24 @@ Arena Trainer::getFavoriteArena() const {
 
 void Trainer::Info() {
     std::cout << "**" << trainerID << ", " << name << ", " << favoriteArena << "**" << std::endl;
-    for(int i = 0; i < pokemons.size(); i ++) {
-        pokemons[i]->Info();
+    for(int i = 0; i < duelPokemons.size(); i ++) {
+        duelPokemons[i]->Info();
     }
 }
+
+void Trainer::resetDP() {
+    duelPokemons = pokemons;
+}
+
+void Trainer::replaceDP() {
+    duelPokemons.erase(duelPokemons.begin());
+}
+
+Pokemon* Trainer::getNewDP() {
+    return duelPokemons[0];
+}
+
+int Trainer::getDPCount() {
+    return (int)duelPokemons.size();
+}
+
