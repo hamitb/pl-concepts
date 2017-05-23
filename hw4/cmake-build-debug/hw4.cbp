@@ -118,6 +118,12 @@
 		<Unit filename="/Users/macbook/Desktop/METU/242/github_project/hw4/Pokemon.h">
 			<Option target="hw4"/>
 		</Unit>
+		<Unit filename="/Users/macbook/Desktop/METU/242/github_project/hw4/Tournament.cpp">
+			<Option target="hw4"/>
+		</Unit>
+		<Unit filename="/Users/macbook/Desktop/METU/242/github_project/hw4/Tournament.h">
+			<Option target="hw4"/>
+		</Unit>
 		<Unit filename="/Users/macbook/Desktop/METU/242/github_project/hw4/Trainer.cpp">
 			<Option target="hw4"/>
 		</Unit>

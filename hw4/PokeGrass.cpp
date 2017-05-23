@@ -16,7 +16,11 @@ PokeGrass::PokeGrass(int pokemonID, const std::string &name) : Pokemon(pokemonID
 }
 
 void PokeGrass::attackTo(Pokemon *target, Arena currentArena) {
-    applyEffect(EFFECT, target);
+    if(!target->isEfected())
+        applyEffect(EFFECT, target);
+    int damage = calculateDamage(target);
+    target->setAttDamage(damage);
+    target->getAttDamage();
 }
 
 void PokeGrass::levelUp() {
@@ -30,16 +34,16 @@ void PokeGrass::setRooted(bool rooted) {
 
 void PokeGrass::setEffDamage() {
     if(burning){
-        CUR_EFF_DAM = BURN_DAMAGE * 2;
-        isDoubled = true;
+        CUR_EFF_DAM = std::max(0, BURN_DAMAGE * 2 - MAG_DEF);
+        effectIntensity = "!!!!";
     }
     else if(drowning){
-        CUR_EFF_DAM = DROWN_DAMAGE;
-        isDoubled = false;
+        CUR_EFF_DAM = std::max(0, DROWN_DAMAGE - MAG_DEF);
+        effectIntensity = "!!";
     }
     else if(electrified){
-        CUR_EFF_DAM = ELECTRIFY_DAMAGE;
-        isDoubled = false;
+        CUR_EFF_DAM = std::max(0, ELECTRIFY_DAMAGE - MAG_DEF);
+        effectIntensity = "!!";
     }
 }
 
@@ -62,6 +66,10 @@ void PokeGrass::Reset() {
     electrified = false;
     rooted = false;
     dead = false;
+    effectIntensity = "";
+    effected = false;
+    arenaEffected = false;
+    effectStatus = "";
 
     HP = 800;
     ATK = 40;
@@ -75,16 +83,18 @@ void PokeGrass::setArenaEff(Arena arena) {
     switch(arena)
     {
         case FOREST:
-            HP += 100; ATK += 10; arenaBuff = 1;
+            HP += 100; ATK += 10; arenaBuff = '+';
             break;
         case MAGMA:
-            HP -= 100; ATK -= 10; arenaBuff = -1;
+            HP -= 100; ATK -= 10; arenaBuff = '-';
             break;
         case SKY:
-            HP -= 100; ATK -= 10; arenaBuff = -1;
+            HP -= 100; ATK -= 10; arenaBuff = '-';
             break;
-        case STADIUM:
-            arenaBuff = 0;
+        default:
+            arenaBuff = '/';
     }
+
+    arenaEffected = true;
 }
 

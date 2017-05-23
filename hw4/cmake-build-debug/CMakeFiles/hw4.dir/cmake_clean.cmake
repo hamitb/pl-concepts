@@ -8,6 +8,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/hw4.dir/PokeGrass.cpp.o"
   "CMakeFiles/hw4.dir/Trainer.cpp.o"
   "CMakeFiles/hw4.dir/TrainerCenter.cpp.o"
+  "CMakeFiles/hw4.dir/Tournament.cpp.o"
   "hw4.pdb"
   "hw4"
 )

@@ -4,18 +4,20 @@
 #include "PokeGrass.h"
 #include "PokeFlying.h"
 #include "TrainerCenter.h"
+#include "Tournament.h"
 
 #include <iostream>
 
 bool attributeTest();
 bool effectTest();
 bool trainerCenterTest();
+bool pokeDuelTest();
 
 void introduceYourself(Pokemon *pokemon);
 
 int main(int argc, char** argv)
 {
-	if(!attributeTest() || !effectTest() || !trainerCenterTest()) // || aTest() || anotherTest() ...
+	if(!attributeTest() || !effectTest() || !pokeDuelTest()) // || aTest() || anotherTest() ...
 	{
 		return -1;
 	}
@@ -27,6 +29,20 @@ bool trainerCenterTest() {
     TrainerCenter newCenter("2Trainers.txt");
 
     newCenter.Info();
+    return true;
+}
+
+bool pokeDuelTest() {
+    PokeFire fire(0, "Charmander");
+    PokeWater water(1, "Psyduck");
+    PokeElectric electric(2, "Pikachu");
+    PokeGrass grass(3, "Bulbasaur");
+    PokeFlying flying(4, "Zapdos");
+
+    Tournament aTournament("sample tournament");
+
+    aTournament.duelBetween(&flying, &water, SKY);
+
     return true;
 }
 

@@ -14,11 +14,13 @@ PokeFlying::PokeFlying(int pokemonID, const std::string &name) : Pokemon(pokemon
     PHY_DEF = 15;
     EFFECT = NOTHING;
 
-    isDoubled = false;
+    effectIntensity = "";
 }
 
 void PokeFlying::attackTo(Pokemon *target, Arena currentArena) {
-
+    int damage = calculateDamage(target);
+    target->setAttDamage(damage);
+    target->getAttDamage();
 }
 
 void PokeFlying::levelUp() {
@@ -54,6 +56,11 @@ void PokeFlying::Reset() {
     electrified = false;
     rooted = false;
     dead = false;
+    effectIntensity = "";
+    effected = false;
+    arenaEffected = false;
+    effectStatus = "";
+
 
     HP = 650;
     ATK = 55;
@@ -74,15 +81,21 @@ void PokeFlying::setArenaEff(Arena arena) {
     switch(arena)
     {
         case SKY:
-            HP += 100; ATK += 10; arenaBuff = 1;
+            HP += 100; ATK += 10; arenaBuff = '+';
             break;
         case OCEAN:
-            HP -= 100; ATK -= 10; arenaBuff = -1;
+            HP -= 100; ATK -= 10; arenaBuff = '-';
             break;
         case ELECTRICITY:
-            HP -= 100; ATK -= 10; arenaBuff = -1;
+            HP -= 100; ATK -= 10; arenaBuff = '-';
             break;
         case STADIUM:
-            arenaBuff = 0;
+            arenaBuff = '/';
     }
+
+    arenaEffected = true;
+}
+
+void PokeFlying::setEffected(bool effected) {
+    effected = false;
 }

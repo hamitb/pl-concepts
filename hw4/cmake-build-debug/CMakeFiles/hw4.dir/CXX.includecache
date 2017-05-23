@@ -25,6 +25,8 @@ Pokemon.h
 /Users/macbook/Desktop/METU/242/github_project/hw4/PokeFire.cpp
 string
 -
+algorithm
+-
 iostream
 -
 Pokemon.h
@@ -81,6 +83,8 @@ Pokemon.h
 /Users/macbook/Desktop/METU/242/github_project/hw4/Pokemon.cpp
 string
 -
+iostream
+-
 Pokemon.h
 /Users/macbook/Desktop/METU/242/github_project/hw4/Pokemon.h
 
@@ -89,6 +93,26 @@ string
 -
 Enums.h
 /Users/macbook/Desktop/METU/242/github_project/hw4/Enums.h
+
+/Users/macbook/Desktop/METU/242/github_project/hw4/Tournament.cpp
+string
+-
+algorithm
+-
+iostream
+-
+vector
+-
+Trainer.h
+/Users/macbook/Desktop/METU/242/github_project/hw4/Trainer.h
+Tournament.h
+/Users/macbook/Desktop/METU/242/github_project/hw4/Tournament.h
+
+/Users/macbook/Desktop/METU/242/github_project/hw4/Tournament.h
+Trainer.h
+/Users/macbook/Desktop/METU/242/github_project/hw4/Trainer.h
+vector
+-
 
 /Users/macbook/Desktop/METU/242/github_project/hw4/Trainer.cpp
 string
@@ -157,6 +181,8 @@ PokeFlying.h
 /Users/macbook/Desktop/METU/242/github_project/hw4/PokeFlying.h
 TrainerCenter.h
 /Users/macbook/Desktop/METU/242/github_project/hw4/TrainerCenter.h
+Tournament.h
+/Users/macbook/Desktop/METU/242/github_project/hw4/Tournament.h
 iostream
 -
 

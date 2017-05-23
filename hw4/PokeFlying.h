@@ -17,6 +17,7 @@ public:
     void Info();
     void Reset();
     void setArenaEff(Arena arena);
+    void setEffected(bool effected);
 protected:
 	// Add your protected methods/attributes here.
     virtual void getLevelBonus();

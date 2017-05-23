@@ -17,7 +17,11 @@ PokeWater::PokeWater(int pokemonID, const std::string &name) : Pokemon(pokemonID
 }
 
 void PokeWater::attackTo(Pokemon *target, Arena currentArena) {
-    applyEffect(EFFECT, target);
+    if(!target->isEfected())
+        applyEffect(EFFECT, target);
+    int damage = calculateDamage(target);
+    target->setAttDamage(damage);
+    target->getAttDamage();
 }
 
 void PokeWater::levelUp() {
@@ -31,16 +35,17 @@ void PokeWater::setDrowning(bool drowning){
 
 void PokeWater::setEffDamage() {
     if(electrified){
-        CUR_EFF_DAM = ELECTRIFY_DAMAGE * 2;
-        isDoubled = true;
+        CUR_EFF_DAM = std::max(0, ELECTRIFY_DAMAGE * 2 - MAG_DEF);
+
+        effectIntensity = "!!!!";
     }
     else if(burning){
-        CUR_EFF_DAM = BURN_DAMAGE;
-        isDoubled = false;
+        CUR_EFF_DAM = std::max(0, BURN_DAMAGE - MAG_DEF);
+        effectIntensity = "!!";
     }
     else if(rooted){
-        CUR_EFF_DAM = ROOT_DAMAGE;
-        isDoubled = false;
+        CUR_EFF_DAM = std::max(0, ROOT_DAMAGE - MAG_DEF);
+        effectIntensity = "!!";
     }
 }
 
@@ -52,7 +57,11 @@ void PokeWater::Reset() {
     electrified = false;
     rooted = false;
     dead = false;
-    isDoubled = false;
+    effectIntensity = "";
+    effected = false;
+    arenaEffected = false;
+    effectStatus = "";
+
 
     HP = 700;
     ATK = 50;
@@ -77,16 +86,18 @@ void PokeWater::setArenaEff(Arena arena) {
     switch(arena)
     {
         case OCEAN:
-            HP += 100; ATK += 10; arenaBuff = 1;
+            HP += 100; ATK += 10; arenaBuff = '+';
             break;
         case ELECTRICITY:
-            HP -= 100; ATK -= 10; arenaBuff = -1;
+            HP -= 100; ATK -= 10; arenaBuff = '-';
             break;
         case FOREST:
-            HP -= 100; ATK -= 10; arenaBuff = -1;
+            HP -= 100; ATK -= 10; arenaBuff = '-';
             break;
-        case STADIUM:
-            arenaBuff = 0;
+        default:
+            arenaBuff = '/';
     }
+
+    arenaEffected = true;
 }
 

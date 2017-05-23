@@ -3,6 +3,7 @@
 //
 
 #include <string>
+#include <iostream>
 #include "Pokemon.h"
 
 Pokemon::Pokemon(int pokemonID, const std::string &name) {
@@ -17,6 +18,9 @@ Pokemon::Pokemon(int pokemonID, const std::string &name) {
     dead = false;
 
     level = 0;
+    effected = false;
+    arenaEffected = false;
+    effectStatus = "";
 }
 
 Pokemon::~Pokemon() {
@@ -97,30 +101,77 @@ void Pokemon::setAttDamage(int damage) {
 }
 
 void Pokemon::applyEffect(Effect effect, Pokemon* target) {
-    switch(effect){
-        case BURNING:
-            if(!target->isBurning()){
-                target->setBurning(true);
-                target->setEffDamage();
-            }
-            break;
-        case DROWNING:
-            if(!target->isDrowning()){
-                target->setDrowning(true);
-                target->setEffDamage();
-            }
-            break;
-        case ELECTRIFIED:
-            if(!target->isElectrified()) {
-                target->setElectrified(true);
-                target->setEffDamage();
-            }
-            break;
-        case ROOTED:
-            if(!target->isRooted()){
-                target->setRooted(true);
-                target->setEffDamage();
-            }
-            break;
+
+    if(!target->isEfected()){
+        switch(effect){
+            case BURNING:
+                if(!target->isBurning()){
+                    target->setBurning(true);
+                    target->setEffDamage();
+                    target->effectStatus = "burning";
+                }
+                break;
+            case DROWNING:
+                if(!target->isDrowning()){
+                    target->setDrowning(true);
+                    target->setEffDamage();
+                    target->effectStatus = "drowning";
+                }
+                break;
+            case ELECTRIFIED:
+                if(!target->isElectrified()) {
+                    target->setElectrified(true);
+                    target->setEffDamage();
+                    target->effectStatus = "electrified";
+                }
+                break;
+            case ROOTED:
+                if(!target->isRooted()){
+                    target->setRooted(true);
+                    target->setEffDamage();
+                    target->effectStatus = "rooted";
+                }
+                break;
+        }
+
+        target->setEffected(true);
     }
+}
+
+int Pokemon::getAttDamage() {
+    HP = std::max(HP - CUR_ATT_DAM, 0);
+    updateDeadStatus();
+}
+
+int Pokemon::getEffDamage() {
+    HP = std::max(HP - CUR_EFF_DAM, 0);
+    updateDeadStatus();
+}
+
+char Pokemon::getArenaEff() {
+    return arenaBuff;
+}
+
+int Pokemon::calculateDamage(Pokemon *target){
+    return std::max(1, ATK - target->getPHY_DEF());
+}
+
+bool Pokemon::isEfected() {
+    return effected;
+}
+
+bool Pokemon::isArenaEffected() {
+    return arenaEffected;
+}
+
+std::string Pokemon::getEffStatus() {
+    return effectStatus;
+}
+
+std::string Pokemon::getEffIntensity() {
+    return effectIntensity;
+}
+
+void Pokemon::setEffected(bool effected) {
+    this->effected = effected;
 }

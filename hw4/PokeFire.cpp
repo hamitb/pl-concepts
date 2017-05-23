@@ -3,6 +3,7 @@
 //
 
 #include <string>
+#include <algorithm>
 #include <iostream>
 #include "Pokemon.h"
 #include "PokeFire.h"
@@ -16,7 +17,11 @@ PokeFire::PokeFire(int pokemonID, const std::string &name) : Pokemon(pokemonID, 
 }
 
 void PokeFire::attackTo(Pokemon *target, Arena currentArena) {
-    applyEffect(EFFECT, target);
+    if(!target->isEfected())
+        applyEffect(EFFECT, target);
+    int damage = calculateDamage(target);
+    target->setAttDamage(damage);
+    target->getAttDamage();
 }
 
 void PokeFire::levelUp() {
@@ -30,16 +35,16 @@ void PokeFire::setBurning(bool burning){
 
 void PokeFire::setEffDamage() {
     if(drowning){
-        CUR_EFF_DAM = DROWN_DAMAGE * 2;
-        isDoubled = true;
+        CUR_EFF_DAM = std::max(0, DROWN_DAMAGE * 2 - MAG_DEF);
+        effectIntensity = "!!!!";
     }
     else if(electrified){
-        CUR_EFF_DAM = ELECTRIFY_DAMAGE;
-        isDoubled = false;
+        CUR_EFF_DAM = std::max(0, ELECTRIFY_DAMAGE - MAG_DEF);
+        effectIntensity = "!!";
     }
     else if(rooted){
-        CUR_EFF_DAM = ROOT_DAMAGE;
-        isDoubled = false;
+        CUR_EFF_DAM = std::max(0, ROOT_DAMAGE - MAG_DEF);
+        effectIntensity = "!!";
     }
 }
 
@@ -55,7 +60,10 @@ void PokeFire::Reset() {
     electrified = false;
     rooted = false;
     dead = false;
-    isDoubled = false;
+    effected = false;
+    arenaEffected = false;
+    effectIntensity = "";
+    effectStatus = "";
 
     HP = 600;
     ATK = 60;
@@ -76,15 +84,17 @@ void PokeFire::setArenaEff(Arena arena) {
     switch(arena)
     {
         case MAGMA:
-            HP += 100; ATK += 10; arenaBuff = 1;
+            HP += 100; ATK += 10; arenaBuff = '+';
             break;
         case OCEAN:
-            HP -= 100; ATK -= 10; arenaBuff = -1;
+            HP -= 100; ATK -= 10; arenaBuff = '-';
             break;
         case SKY:
-            HP -= 100; ATK -= 10; arenaBuff = -1;
+            HP -= 100; ATK -= 10; arenaBuff = '-';
             break;
-        case STADIUM:
-            arenaBuff = 0;
+        default:
+            arenaBuff = '/';
     }
+
+    arenaEffected = true;
 }

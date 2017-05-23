@@ -40,16 +40,24 @@ public:
 
 	// Own Methods
     virtual void setEffDamage();
+    virtual void setEffected(bool effected);
     virtual void Info() = 0;
     virtual void Reset() = 0;
     virtual void setArenaEff(Arena arena) = 0;
     void setAttDamage(int damage);
+    char getArenaEff();
+    int getAttDamage();
+    int getEffDamage();
+    bool isEfected();
+	bool isArenaEffected();
     void applyEffect(Effect effect, Pokemon* target);
+    int calculateDamage(Pokemon *target);
     bool isDead();
-    void updateDeadStatus();
+	std::string getEffIntensity();
+	std::string getEffStatus();
 protected:
     virtual void getLevelBonus() = 0;
-
+    void updateDeadStatus();
     int pokemonID; 	// Unique
 
 	std::string name;
@@ -68,9 +76,12 @@ protected:
 	int CUR_EFF_DAM;
     int CUR_ATT_DAM;
     bool dead;
-    bool isDoubled;
-    int arenaBuff;
+    bool effected;
+	bool arenaEffected;
+    char arenaBuff;
     int level;
+    std::string effectIntensity;
+	std::string effectStatus;
     Effect EFFECT;
 };
 

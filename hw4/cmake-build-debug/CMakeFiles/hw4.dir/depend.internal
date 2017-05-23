@@ -30,6 +30,12 @@ CMakeFiles/hw4.dir/Pokemon.cpp.o
  /Users/macbook/Desktop/METU/242/github_project/hw4/Enums.h
  /Users/macbook/Desktop/METU/242/github_project/hw4/Pokemon.cpp
  /Users/macbook/Desktop/METU/242/github_project/hw4/Pokemon.h
+CMakeFiles/hw4.dir/Tournament.cpp.o
+ /Users/macbook/Desktop/METU/242/github_project/hw4/Enums.h
+ /Users/macbook/Desktop/METU/242/github_project/hw4/Pokemon.h
+ /Users/macbook/Desktop/METU/242/github_project/hw4/Tournament.cpp
+ /Users/macbook/Desktop/METU/242/github_project/hw4/Tournament.h
+ /Users/macbook/Desktop/METU/242/github_project/hw4/Trainer.h
 CMakeFiles/hw4.dir/Trainer.cpp.o
  /Users/macbook/Desktop/METU/242/github_project/hw4/Enums.h
  /Users/macbook/Desktop/METU/242/github_project/hw4/Pokemon.h
@@ -54,6 +60,7 @@ CMakeFiles/hw4.dir/mainPartial.cpp.o
  /Users/macbook/Desktop/METU/242/github_project/hw4/PokeGrass.h
  /Users/macbook/Desktop/METU/242/github_project/hw4/PokeWater.h
  /Users/macbook/Desktop/METU/242/github_project/hw4/Pokemon.h
+ /Users/macbook/Desktop/METU/242/github_project/hw4/Tournament.h
  /Users/macbook/Desktop/METU/242/github_project/hw4/Trainer.h
  /Users/macbook/Desktop/METU/242/github_project/hw4/TrainerCenter.h
  /Users/macbook/Desktop/METU/242/github_project/hw4/mainPartial.cpp

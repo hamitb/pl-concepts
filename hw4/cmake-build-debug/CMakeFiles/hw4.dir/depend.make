@@ -30,6 +30,12 @@ CMakeFiles/hw4.dir/Pokemon.cpp.o: ../Enums.h
 CMakeFiles/hw4.dir/Pokemon.cpp.o: ../Pokemon.cpp
 CMakeFiles/hw4.dir/Pokemon.cpp.o: ../Pokemon.h
 
+CMakeFiles/hw4.dir/Tournament.cpp.o: ../Enums.h
+CMakeFiles/hw4.dir/Tournament.cpp.o: ../Pokemon.h
+CMakeFiles/hw4.dir/Tournament.cpp.o: ../Tournament.cpp
+CMakeFiles/hw4.dir/Tournament.cpp.o: ../Tournament.h
+CMakeFiles/hw4.dir/Tournament.cpp.o: ../Trainer.h
+
 CMakeFiles/hw4.dir/Trainer.cpp.o: ../Enums.h
 CMakeFiles/hw4.dir/Trainer.cpp.o: ../Pokemon.h
 CMakeFiles/hw4.dir/Trainer.cpp.o: ../Trainer.cpp
@@ -53,6 +59,7 @@ CMakeFiles/hw4.dir/mainPartial.cpp.o: ../PokeFlying.h
 CMakeFiles/hw4.dir/mainPartial.cpp.o: ../PokeGrass.h
 CMakeFiles/hw4.dir/mainPartial.cpp.o: ../PokeWater.h
 CMakeFiles/hw4.dir/mainPartial.cpp.o: ../Pokemon.h
+CMakeFiles/hw4.dir/mainPartial.cpp.o: ../Tournament.h
 CMakeFiles/hw4.dir/mainPartial.cpp.o: ../Trainer.h
 CMakeFiles/hw4.dir/mainPartial.cpp.o: ../TrainerCenter.h
 CMakeFiles/hw4.dir/mainPartial.cpp.o: ../mainPartial.cpp

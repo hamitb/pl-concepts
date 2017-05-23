@@ -16,7 +16,11 @@ PokeElectric::PokeElectric(int pokemonID, const std::string &name) : Pokemon(pok
 }
 
 void PokeElectric::attackTo(Pokemon *target, Arena currentArena) {
-    applyEffect(EFFECT, target);
+    if(!target->isEfected())
+        applyEffect(EFFECT, target);
+    int damage = calculateDamage(target);
+    target->setAttDamage(damage);
+    target->getAttDamage();
 }
 
 void PokeElectric::levelUp() {
@@ -30,16 +34,16 @@ void PokeElectric::setElectrified(bool electrified) {
 
 void PokeElectric::setEffDamage() {
     if(rooted){
-        CUR_EFF_DAM = ROOT_DAMAGE * 2;
-        isDoubled = true;
+        CUR_EFF_DAM = std::max(0, ROOT_DAMAGE * 2 - MAG_DEF);
+        effectIntensity = "!!!!";
     }
     else if(burning){
-        CUR_EFF_DAM = BURN_DAMAGE;
-        isDoubled = false;
+        CUR_EFF_DAM = std::max(0, BURN_DAMAGE - MAG_DEF);
+        effectIntensity = "!!";
     }
     else if(drowning){
-        CUR_EFF_DAM = DROWN_DAMAGE;
-        isDoubled = false;
+        CUR_EFF_DAM = std::max(0, DROWN_DAMAGE - MAG_DEF);
+        effectIntensity = "!!";
     }
 }
 
@@ -55,7 +59,11 @@ void PokeElectric::Reset() {
     electrified = false;
     rooted = false;
     dead = false;
-    isDoubled = false;
+    effectIntensity = "";
+    effected = false;
+    arenaEffected = false;
+    effectStatus = "";
+
 
     HP = 500;
     ATK = 70;
@@ -76,15 +84,17 @@ void PokeElectric::setArenaEff(Arena arena) {
     switch(arena)
     {
         case ELECTRICITY:
-            HP += 100; ATK += 10; arenaBuff = 1;
+            HP += 100; ATK += 10; arenaBuff = '+';
             break;
         case MAGMA:
-            HP -= 100; ATK -= 10; arenaBuff = -1;
+            HP -= 100; ATK -= 10; arenaBuff = '-';
             break;
         case FOREST:
-            HP -= 100; ATK -= 10; arenaBuff = -1;
+            HP -= 100; ATK -= 10; arenaBuff = '-';
             break;
         case STADIUM:
-            arenaBuff = 0;
+            arenaBuff = '/';
     }
+
+    arenaEffected = true;
 }

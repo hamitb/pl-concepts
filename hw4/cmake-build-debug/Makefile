@@ -285,6 +285,33 @@ Pokemon.cpp.s:
 	$(MAKE) -f CMakeFiles/hw4.dir/build.make CMakeFiles/hw4.dir/Pokemon.cpp.s
 .PHONY : Pokemon.cpp.s
 
+Tournament.o: Tournament.cpp.o
+
+.PHONY : Tournament.o
+
+# target to build an object file
+Tournament.cpp.o:
+	$(MAKE) -f CMakeFiles/hw4.dir/build.make CMakeFiles/hw4.dir/Tournament.cpp.o
+.PHONY : Tournament.cpp.o
+
+Tournament.i: Tournament.cpp.i
+
+.PHONY : Tournament.i
+
+# target to preprocess a source file
+Tournament.cpp.i:
+	$(MAKE) -f CMakeFiles/hw4.dir/build.make CMakeFiles/hw4.dir/Tournament.cpp.i
+.PHONY : Tournament.cpp.i
+
+Tournament.s: Tournament.cpp.s
+
+.PHONY : Tournament.s
+
+# target to generate assembly for a file
+Tournament.cpp.s:
+	$(MAKE) -f CMakeFiles/hw4.dir/build.make CMakeFiles/hw4.dir/Tournament.cpp.s
+.PHONY : Tournament.cpp.s
+
 Trainer.o: Trainer.cpp.o
 
 .PHONY : Trainer.o
@@ -393,6 +420,9 @@ help:
 	@echo "... Pokemon.o"
 	@echo "... Pokemon.i"
 	@echo "... Pokemon.s"
+	@echo "... Tournament.o"
+	@echo "... Tournament.i"
+	@echo "... Tournament.s"
 	@echo "... Trainer.o"
 	@echo "... Trainer.i"
 	@echo "... Trainer.s"
