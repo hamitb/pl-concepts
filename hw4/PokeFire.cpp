@@ -17,8 +17,7 @@ PokeFire::PokeFire(int pokemonID, const std::string &name) : Pokemon(pokemonID, 
 }
 
 void PokeFire::attackTo(Pokemon *target, Arena currentArena) {
-    if(!target->isEfected())
-        applyEffect(EFFECT, target);
+    applyEffect(EFFECT, target);
     int damage = calculateDamage(target);
     target->setAttDamage(damage);
     target->getAttDamage();
@@ -38,14 +37,17 @@ void PokeFire::setEffDamage(Effect effect) {
         case DROWNING:
             CUR_DRW_DAM = std::max(0, DROWN_DAMAGE * 2 - MAG_DEF);
             effectIntensity_DRW = "!!!!";
+            setEffected(true);
             break;
         case ELECTRIFIED:
             CUR_ELC_DAM = std::max(0, ELECTRIFY_DAMAGE - MAG_DEF);
             effectIntensity_ELC = "!!";
+            setEffected(true);
             break;
         case ROOTED:
             CUR_RTD_DAM = std::max(0, ROOT_DAMAGE - MAG_DEF);
             effectIntensity_RTD = "!!";
+            setEffected(true);
             break;
     }
 }
@@ -66,9 +68,6 @@ void PokeFire::updateEffDamage() {
 
 }
 
-void PokeFire::Info() {
-    std::cout << "[" << name << ", " << pokemonID << ", FIRE]" << std::endl;
-}
 
 void PokeFire::Reset() {
     CUR_BRN_DAM = 0;

@@ -135,7 +135,6 @@ void Pokemon::applyEffect(Effect effect, Pokemon* target) {
             break;
      }
 
-        target->setEffected(true);
 }
 
 int Pokemon::getAttDamage() {
@@ -144,21 +143,23 @@ int Pokemon::getAttDamage() {
 }
 
 void Pokemon::getEffDamage(Effect effect) {
-    if(burning){
-        std::cout << "            " << getName() << "(" << getHP() << ")" << Helpers::getEffectName(effect) << getEffIntensity(effect) << std::endl;
-        HP = std::max(HP - CUR_BRN_DAM, 0);
-    }
-    else if(drowning){
-        std::cout << "            " << getName() << "(" << getHP() << ")" << Helpers::getEffectName(effect) << getEffIntensity(effect) << std::endl;
-        HP = std::max(HP - CUR_DRW_DAM, 0);
-    }
-    else if(electrified){
-        std::cout << "            " << getName() << "(" << getHP() << ")" << Helpers::getEffectName(effect) << getEffIntensity(effect) << std::endl;
-        HP = std::max(HP - CUR_ELC_DAM, 0);
-    }
-    else if(rooted){
-        std::cout << "            " << getName() << "(" << getHP() << ")" << Helpers::getEffectName(effect) << getEffIntensity(effect) << std::endl;
-        HP = std::max(HP - CUR_RTD_DAM, 0);
+    switch(effect) {
+        case BURNING:
+            std::cout << "\t\t\t" << getName() << "(" << getHP() << ") " << Helpers::getEffectName(effect) << getEffIntensity(effect) << std::endl;
+            HP = std::max(HP - CUR_BRN_DAM, 0);
+            break;
+        case DROWNING:
+            std::cout << "\t\t\t" << getName() << "(" << getHP() << ") " << Helpers::getEffectName(effect) << getEffIntensity(effect) << std::endl;
+            HP = std::max(HP - CUR_DRW_DAM, 0);
+            break;
+        case ELECTRIFIED:
+            std::cout << "\t\t\t" << getName() << "(" << getHP() << ") " << Helpers::getEffectName(effect) << getEffIntensity(effect) << std::endl;
+            HP = std::max(HP - CUR_ELC_DAM, 0);
+            break;
+        case ROOTED:
+            std::cout << "\t\t\t" << getName() << "(" << getHP() << ") " << Helpers::getEffectName(effect) << getEffIntensity(effect) << std::endl;
+            HP = std::max(HP - CUR_RTD_DAM, 0);
+            break;
     }
 
     updateDeadStatus();
@@ -199,4 +200,13 @@ void Pokemon::setEffected(bool effected) {
 
 void Pokemon::updateEffDamage() {
 
+}
+
+void Pokemon::Info() {
+    std::cout << "Name:" << getName() << std::endl
+              << "effected? " << isEfected() << std::endl
+              << "burning? " << isBurning() << " dam: " << CUR_BRN_DAM << std::endl
+              << "drowning? " << isDrowning() << " dam: " << CUR_DRW_DAM << std::endl
+              << "electried? " << isElectrified() << " dam: " << CUR_ELC_DAM << std::endl
+              << "rooted? " << isRooted() << " dam: " << CUR_RTD_DAM << std::endl;
 }

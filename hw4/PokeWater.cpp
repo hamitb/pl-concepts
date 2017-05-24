@@ -17,8 +17,7 @@ PokeWater::PokeWater(int pokemonID, const std::string &name) : Pokemon(pokemonID
 }
 
 void PokeWater::attackTo(Pokemon *target, Arena currentArena) {
-    if(!target->isEfected())
-        applyEffect(EFFECT, target);
+    applyEffect(EFFECT, target);
     int damage = calculateDamage(target);
     target->setAttDamage(damage);
     target->getAttDamage();
@@ -37,15 +36,18 @@ void PokeWater::setEffDamage(Effect effect) {
     switch(effect){
         case ELECTRIFIED:
             CUR_ELC_DAM = std::max(0, ELECTRIFY_DAMAGE * 2 - MAG_DEF);
-            effectIntensity_DRW = "!!!!";
+            effectIntensity_ELC = "!!!!";
+            setEffected(true);
             break;
         case BURNING:
             CUR_BRN_DAM = std::max(0, BURN_DAMAGE - MAG_DEF);
-            effectIntensity_ELC = "!!";
+            effectIntensity_BRN = "!!";
+            setEffected(true);
             break;
         case ROOTED:
             CUR_RTD_DAM = std::max(0, ROOT_DAMAGE - MAG_DEF);
             effectIntensity_RTD = "!!";
+            setEffected(true);
             break;
     }
 }
@@ -75,10 +77,6 @@ void PokeWater::Reset() {
     PHY_DEF = 20;
 
     resetLevelBonus();
-}
-
-void PokeWater::Info() {
-    std::cout << "[" << name << ", " << pokemonID << ", WATER]" << std::endl;
 }
 
 void PokeWater::resetLevelBonus() {
@@ -120,11 +118,11 @@ void PokeWater::setArenaEff(Arena arena) {
 void PokeWater::updateEffDamage() {
     if (isElectrified()){
         CUR_ELC_DAM = std::max(0, ELECTRIFY_DAMAGE * 2 - MAG_DEF);
-        effectIntensity_DRW = "!!!!";
+        effectIntensity_ELC = "!!!!";
     }
     if(isBurning()){
         CUR_BRN_DAM = std::max(0, BURN_DAMAGE - MAG_DEF);
-        effectIntensity_ELC = "!!";
+        effectIntensity_BRN = "!!";
     }
     if(isRooted()) {
         CUR_RTD_DAM = std::max(0, ROOT_DAMAGE - MAG_DEF);

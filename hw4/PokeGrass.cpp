@@ -16,8 +16,7 @@ PokeGrass::PokeGrass(int pokemonID, const std::string &name) : Pokemon(pokemonID
 }
 
 void PokeGrass::attackTo(Pokemon *target, Arena currentArena) {
-    if(!target->isEfected())
-        applyEffect(EFFECT, target);
+    applyEffect(EFFECT, target);
     int damage = calculateDamage(target);
     target->setAttDamage(damage);
     target->getAttDamage();
@@ -36,21 +35,20 @@ void PokeGrass::setEffDamage(Effect effect) {
     switch(effect){
         case BURNING:
             CUR_BRN_DAM = std::max(0, BURN_DAMAGE * 2 - MAG_DEF);
-            effectIntensity_DRW = "!!!!";
+            effectIntensity_BRN = "!!!!";
+            setEffected(true);
             break;
         case DROWNING:
             CUR_DRW_DAM = std::max(0, DROWN_DAMAGE - MAG_DEF);
-            effectIntensity_ELC = "!!";
+            effectIntensity_DRW = "!!";
+            setEffected(true);
             break;
         case ELECTRIFIED:
             CUR_ELC_DAM = std::max(0, ELECTRIFY_DAMAGE - MAG_DEF);
-            effectIntensity_RTD = "!!";
+            effectIntensity_ELC = "!!";
+            setEffected(true);
             break;
     }
-}
-
-void PokeGrass::Info() {
-    std::cout << "[" << name << ", " << pokemonID << ", GRASS]" << std::endl;
 }
 
 void PokeGrass::resetLevelBonus() {
@@ -117,15 +115,15 @@ void PokeGrass::setArenaEff(Arena arena) {
 void PokeGrass::updateEffDamage() {
     if (isBurning()){
         CUR_BRN_DAM = std::max(0, BURN_DAMAGE * 2 - MAG_DEF);
-        effectIntensity_DRW = "!!!!";
+        effectIntensity_BRN = "!!!!";
     }
     if(isDrowning()){
         CUR_DRW_DAM = std::max(0, DROWN_DAMAGE - MAG_DEF);
-        effectIntensity_ELC = "!!";
+        effectIntensity_DRW = "!!";
     }
     if(isElectrified()) {
         CUR_ELC_DAM = std::max(0, ELECTRIFY_DAMAGE - MAG_DEF);
-        effectIntensity_RTD = "!!";
+        effectIntensity_ELC = "!!";
     }
 }
 

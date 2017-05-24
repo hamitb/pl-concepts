@@ -43,10 +43,6 @@ void PokeFlying::setRooted(bool rooted) {
     this->rooted = false;
 }
 
-void PokeFlying::Info() {
-    std::cout << "[" << name << ", " << pokemonID << ", FLYING]" << std::endl;
-}
-
 void PokeFlying::Reset() {
     CUR_BRN_DAM = 0;
     CUR_DRW_DAM = 0;

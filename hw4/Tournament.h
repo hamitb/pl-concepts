@@ -29,11 +29,11 @@ public:
     const std::string& getTournamentName() const;
 
 	// Own Methods
-	int getWinnerTrainer(Trainer* trainer1, Trainer* trainer2);
 
 private:
 	int checkWinner(Pokemon *pokemon1, Pokemon *pokemon2);
-
+	int getWinnerTrainer(Trainer* trainer1, Trainer* trainer2);
+	void registerTrainerIndex();
 	std::string tournamentName;
 
 	// Return 1 if Pokemon1 wins.

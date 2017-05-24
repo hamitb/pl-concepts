@@ -42,7 +42,7 @@ public:
     virtual void setEffDamage(Effect effect);
     virtual void updateEffDamage();
     virtual void setEffected(bool effected);
-    virtual void Info() = 0;
+    void Info();
     virtual void Reset() = 0;
     virtual void setArenaEff(Arena arena) = 0;
     void setAttDamage(int damage);

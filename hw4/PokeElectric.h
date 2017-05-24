@@ -11,7 +11,6 @@ public:
     void attackTo(Pokemon* target, Arena currentArena);
     void levelUp();
     void setElectrified(bool electrified);
-    void Info();
     void Reset();
     void setArenaEff(Arena arena);
 protected:

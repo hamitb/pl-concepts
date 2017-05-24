@@ -26,6 +26,7 @@ public:
 	void replaceDP();
 	Pokemon* getNewDP();
 	int getDPCount();
+	int tournamentIndex;
 private:
 	int trainerID; 		// Unique
 	std::string name;

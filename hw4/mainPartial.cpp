@@ -38,9 +38,14 @@ bool DuelTest() {
     Tournament aTournament("sample tournament");
     std::vector<Trainer *> trainers = newCenter.getAllTrainers();
 
-    std::cout << aTournament.getWinnerTrainer(trainers[0], trainers[1]) << std::endl;
+	aTournament.registerTrainers(trainers);
 
-    return true;
+	Trainer *champion = aTournament.commence();
+
+	std::cout << aTournament.getTournamentName() << " has finished! The champion is " << champion->getName() << "." << std::endl;
+
+
+	return true;
 }
 
 

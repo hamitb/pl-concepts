@@ -16,8 +16,7 @@ PokeElectric::PokeElectric(int pokemonID, const std::string &name) : Pokemon(pok
 }
 
 void PokeElectric::attackTo(Pokemon *target, Arena currentArena) {
-    if(!target->isEfected())
-        applyEffect(EFFECT, target);
+    applyEffect(EFFECT, target);
     int damage = calculateDamage(target);
     target->setAttDamage(damage);
     target->getAttDamage();
@@ -36,21 +35,20 @@ void PokeElectric::setEffDamage(Effect effect) {
     switch(effect){
         case ROOTED:
             CUR_RTD_DAM = std::max(0, ROOT_DAMAGE * 2 - MAG_DEF);
-            effectIntensity_DRW = "!!!!";
+            effectIntensity_RTD = "!!!!";
+            setEffected(true);
             break;
         case BURNING:
             CUR_BRN_DAM = std::max(0, BURN_DAMAGE - MAG_DEF);
-            effectIntensity_ELC = "!!";
+            effectIntensity_BRN = "!!";
+            setEffected(true);
             break;
         case DROWNING:
             CUR_DRW_DAM = std::max(0, DROWN_DAMAGE - MAG_DEF);
-            effectIntensity_RTD = "!!";
+            effectIntensity_DRW = "!!";
+            setEffected(true);
             break;
     }
-}
-
-void PokeElectric::Info() {
-    std::cout << "[" << name << ", " << pokemonID << ", ELECTRIC]" << std::endl;
 }
 
 void PokeElectric::Reset() {
@@ -85,7 +83,7 @@ void PokeElectric::getLevelBonus() {
     ATK += 7;
     MAG_DEF += 3;
     PHY_DEF += 0;
-}
+    }
 
 void PokeElectric::resetLevelBonus() {
     HP += 50 * level;
@@ -118,14 +116,14 @@ void PokeElectric::setArenaEff(Arena arena) {
 void PokeElectric::updateEffDamage() {
     if (isRooted()){
         CUR_RTD_DAM = std::max(0, ROOT_DAMAGE * 2 - MAG_DEF);
-        effectIntensity_DRW = "!!!!";
+        effectIntensity_RTD = "!!!!";
     }
     if(isBurning()){
         CUR_BRN_DAM = std::max(0, BURN_DAMAGE - MAG_DEF);
-        effectIntensity_ELC = "!!";
+        effectIntensity_BRN = "!!";
     }
-    if(isRooted()) {
+    if(isDrowning()) {
         CUR_DRW_DAM = std::max(0, DROWN_DAMAGE - MAG_DEF);
-        effectIntensity_RTD = "!!";
+        effectIntensity_DRW = "!!";
     }
 }

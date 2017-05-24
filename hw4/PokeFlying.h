@@ -14,7 +14,6 @@ public:
     void setDrowning(bool drowning);
     void setBurning(bool burning);
     void setRooted(bool rooted);
-    void Info();
     void Reset();
     void setArenaEff(Arena arena);
     void setEffected(bool effected);

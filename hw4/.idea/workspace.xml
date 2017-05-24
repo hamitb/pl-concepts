@@ -12,6 +12,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="71521f70-1ca6-498a-bda0-559ff3d6c1f3" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/hw4.dir/Pokemon.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/hw4.dir/Pokemon.cpp.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/hw4.dir/Trainer.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/hw4.dir/Trainer.cpp.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/hw4.dir/mainPartial.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/hw4.dir/mainPartial.cpp.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/hw4" afterPath="$PROJECT_DIR$/cmake-build-debug/hw4" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PokeElectric.cpp" afterPath="$PROJECT_DIR$/PokeElectric.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PokeElectric.h" afterPath="$PROJECT_DIR$/PokeElectric.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PokeFire.cpp" afterPath="$PROJECT_DIR$/PokeFire.cpp" />
@@ -22,11 +27,11 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PokeGrass.h" afterPath="$PROJECT_DIR$/PokeGrass.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PokeWater.cpp" afterPath="$PROJECT_DIR$/PokeWater.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PokeWater.h" afterPath="$PROJECT_DIR$/PokeWater.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pokemon.cpp" afterPath="$PROJECT_DIR$/Pokemon.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pokemon.h" afterPath="$PROJECT_DIR$/Pokemon.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tournament.cpp" afterPath="$PROJECT_DIR$/Tournament.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tournament.h" afterPath="$PROJECT_DIR$/Tournament.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Trainer.cpp" afterPath="$PROJECT_DIR$/Trainer.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Trainer.h" afterPath="$PROJECT_DIR$/Trainer.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TrainerCenter.cpp" afterPath="$PROJECT_DIR$/TrainerCenter.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mainPartial.cpp" afterPath="$PROJECT_DIR$/mainPartial.cpp" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -42,240 +47,124 @@
     <favorites_list name="hw4" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.3976024">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="94">
-          <file leaf-file-name="Trainer.h" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Trainer.h">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="209">
-                  <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Tournament.h" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Tournament.h">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="441">
-                  <caret line="40" column="22" lean-forward="false" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
-                  <folding>
-                    <element signature="e#43#63#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="mainPartial.cpp" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/mainPartial.cpp">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="351">
-                  <caret line="50" column="5" lean-forward="true" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
-                  <folding>
-                    <element signature="e#0#21#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Pokemon.h" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Pokemon.h">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="108">
-                  <caret line="42" column="17" lean-forward="false" selection-start-line="42" selection-start-column="17" selection-end-line="42" selection-end-column="35" />
-                  <folding>
-                    <element signature="e#37#54#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="2Trainers.txt" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/2Trainers.txt">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="247">
-                  <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="PokeFire.h" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/PokeFire.h">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="386">
-                  <caret line="21" column="27" lean-forward="false" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="PokeElectric.h" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/PokeElectric.h">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="386">
-                  <caret line="21" column="27" lean-forward="false" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="PokeGrass.h" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/PokeGrass.h">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="76">
-                  <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="PokeWater.h" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/PokeWater.h">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="399">
-                  <caret line="21" column="27" lean-forward="false" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="PokeFlying.h" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/PokeFlying.h">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="429">
-                  <caret line="23" column="4" lean-forward="false" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="27" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="116">
-          <file leaf-file-name="TrainerCenter.cpp" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/TrainerCenter.cpp">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="154">
-                  <caret line="144" column="0" lean-forward="false" selection-start-line="144" selection-start-column="0" selection-end-line="144" selection-end-column="0" />
-                  <folding>
-                    <element signature="e#51#68#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Pokemon.cpp" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Pokemon.cpp">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1503">
-                  <caret line="199" column="33" lean-forward="false" selection-start-line="199" selection-start-column="33" selection-end-line="199" selection-end-column="33" />
-                  <folding>
-                    <element signature="e#51#68#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Trainer.cpp" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Trainer.cpp">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="598">
-                  <caret line="57" column="28" lean-forward="false" selection-start-line="57" selection-start-column="28" selection-end-line="57" selection-end-column="28" />
-                  <folding>
-                    <element signature="e#51#68#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Tournament.cpp" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/Tournament.cpp">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="3914">
-                  <caret line="206" column="68" lean-forward="false" selection-start-line="206" selection-start-column="68" selection-end-line="206" selection-end-column="68" />
-                  <folding>
-                    <element signature="e#51#68#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="2TrainersOutput.txt" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/2TrainersOutput.txt">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1767">
-                  <caret line="93" column="40" lean-forward="true" selection-start-line="93" selection-start-column="40" selection-end-line="93" selection-end-column="40" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="PokeWater.cpp" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/PokeWater.cpp">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="524">
-                  <caret line="98" column="28" lean-forward="true" selection-start-line="98" selection-start-column="28" selection-end-line="98" selection-end-column="28" />
-                  <folding>
-                    <element signature="e#51#68#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="PokeGrass.cpp" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/PokeGrass.cpp">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="379">
-                  <caret line="92" column="9" lean-forward="false" selection-start-line="92" selection-start-column="9" selection-end-line="92" selection-end-column="9" />
-                  <folding>
-                    <element signature="e#51#68#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="PokeElectric.cpp" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/PokeElectric.cpp">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="413">
-                  <caret line="89" column="25" lean-forward="false" selection-start-line="89" selection-start-column="25" selection-end-line="89" selection-end-column="25" />
-                  <folding>
-                    <element signature="e#51#68#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="PokeFlying.cpp" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/PokeFlying.cpp">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="85">
-                  <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-                  <folding>
-                    <element signature="e#51#68#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="PokeFire.cpp" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/PokeFire.cpp">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="302">
-                  <caret line="109" column="16" lean-forward="false" selection-start-line="109" selection-start-column="16" selection-end-line="109" selection-end-column="16" />
-                  <folding>
-                    <element signature="e#51#68#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="94">
+      <file leaf-file-name="Pokemon.cpp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Pokemon.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="316">
+              <caret line="160" column="27" lean-forward="true" selection-start-line="160" selection-start-column="27" selection-end-line="160" selection-end-column="27" />
+              <folding>
+                <element signature="e#51#68#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Tournament.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Tournament.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="344">
+              <caret line="159" column="28" lean-forward="false" selection-start-line="159" selection-start-column="28" selection-end-line="159" selection-end-column="28" />
+              <folding>
+                <element signature="e#51#68#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Pokemon.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Pokemon.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="17" lean-forward="false" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
+              <folding>
+                <element signature="e#37#54#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PokeElectric.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PokeElectric.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="439">
+              <caret line="129" column="0" lean-forward="true" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
+              <folding>
+                <element signature="e#51#68#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PokeFire.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PokeFire.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="18" column="39" lean-forward="false" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
+              <folding>
+                <element signature="e#51#68#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PokeFire.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PokeFire.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PokeElectric.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PokeElectric.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="223">
+              <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PokeFlying.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PokeFlying.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="137">
+              <caret line="69" column="18" lean-forward="false" selection-start-line="69" selection-start-column="18" selection-end-line="69" selection-end-column="18" />
+              <folding>
+                <element signature="e#51#68#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PokeGrass.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PokeGrass.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="203">
+              <caret line="17" column="40" lean-forward="false" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
+              <folding>
+                <element signature="e#51#68#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PokeWater.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PokeWater.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="342">
+              <caret line="127" column="24" lean-forward="false" selection-start-line="127" selection-start-column="24" selection-end-line="127" selection-end-column="24" />
+              <folding>
+                <element signature="e#51#68#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -288,6 +177,24 @@
       <find>setArena</find>
       <find>getLevel</find>
       <find>cout</find>
+      <find>Started Round</find>
+      <find>O</find>
+      <find>Winner</find>
+      <find>updateDEad</find>
+      <find>I</find>
+      <find>Info</find>
+      <find>updateEff</find>
+      <find>updateEFf</find>
+      <find>set</find>
+      <find>update</find>
+      <find>getEff</find>
+      <find>getEF</find>
+      <find>getEf</find>
+      <find>getEffDAm</find>
+      <find>upda</find>
+      <find>getf</find>
+      <find>getEffDama</find>
+      <find>Helper</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -301,24 +208,26 @@
         <option value="$PROJECT_DIR$/Enums.h" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/2TrainersOutput.txt" />
-        <option value="$PROJECT_DIR$/Pokemon.h" />
-        <option value="$PROJECT_DIR$/Pokemon.cpp" />
-        <option value="$PROJECT_DIR$/Tournament.h" />
         <option value="$PROJECT_DIR$/TrainerCenter.cpp" />
-        <option value="$PROJECT_DIR$/mainPartial.cpp" />
-        <option value="$PROJECT_DIR$/Trainer.h" />
         <option value="$PROJECT_DIR$/Trainer.cpp" />
-        <option value="$PROJECT_DIR$/PokeFlying.h" />
-        <option value="$PROJECT_DIR$/PokeWater.h" />
+        <option value="$PROJECT_DIR$/Trainer.h" />
+        <option value="$PROJECT_DIR$/Tournament.h" />
+        <option value="$PROJECT_DIR$/mainPartial.cpp" />
+        <option value="$PROJECT_DIR$/2Trainers.txt" />
+        <option value="$PROJECT_DIR$/cmake-build-debug/2Trainers.txt" />
+        <option value="$PROJECT_DIR$/PokeFlying.cpp" />
         <option value="$PROJECT_DIR$/PokeFire.h" />
         <option value="$PROJECT_DIR$/PokeElectric.h" />
         <option value="$PROJECT_DIR$/PokeGrass.h" />
-        <option value="$PROJECT_DIR$/PokeElectric.cpp" />
+        <option value="$PROJECT_DIR$/PokeWater.h" />
+        <option value="$PROJECT_DIR$/PokeFlying.h" />
+        <option value="$PROJECT_DIR$/Pokemon.h" />
+        <option value="$PROJECT_DIR$/Tournament.cpp" />
         <option value="$PROJECT_DIR$/PokeGrass.cpp" />
         <option value="$PROJECT_DIR$/PokeWater.cpp" />
+        <option value="$PROJECT_DIR$/PokeElectric.cpp" />
         <option value="$PROJECT_DIR$/PokeFire.cpp" />
-        <option value="$PROJECT_DIR$/PokeFlying.cpp" />
-        <option value="$PROJECT_DIR$/Tournament.cpp" />
+        <option value="$PROJECT_DIR$/Pokemon.cpp" />
       </list>
     </option>
   </component>
@@ -610,12 +519,12 @@
       <updated>1495189263600</updated>
       <workItem from="1495189264992" duration="129000" />
       <workItem from="1495189429009" duration="2489000" />
-      <workItem from="1495328544031" duration="57974000" />
+      <workItem from="1495328544031" duration="67685000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60592000" />
+    <option name="totallyTimeSpent" value="70303000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -628,16 +537,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="4" y="0" width="1276" height="800" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32909605" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6694915" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32909605" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22316384" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.8757062" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18881686" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20745543" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3997175" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -776,62 +684,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cmake-build-debug/2Trainers.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
           <caret line="5" column="162" lean-forward="false" selection-start-line="5" selection-start-column="162" selection-end-line="5" selection-end-column="162" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Enums.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1235">
-          <caret line="65" column="9" lean-forward="true" selection-start-line="65" selection-start-column="9" selection-end-line="65" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pokemon.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="42" column="17" lean-forward="false" selection-start-line="42" selection-start-column="17" selection-end-line="42" selection-end-column="35" />
-          <folding>
-            <element signature="e#37#54#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tournament.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="40" column="22" lean-forward="false" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
-          <folding>
-            <element signature="e#43#63#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2Trainers.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -856,34 +712,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mainPartial.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="50" column="5" lean-forward="true" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Trainer.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="57" column="28" lean-forward="false" selection-start-line="57" selection-start-column="28" selection-end-line="57" selection-end-column="28" />
-          <folding>
-            <element signature="e#51#68#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Trainer.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/2TrainersOutput.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1767">
@@ -892,62 +720,104 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Pokemon.cpp">
+    <entry file="file://$PROJECT_DIR$/Trainer.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1503">
-          <caret line="199" column="33" lean-forward="false" selection-start-line="199" selection-start-column="33" selection-end-line="199" selection-end-column="33" />
+        <state relative-caret-position="267">
+          <caret line="29" column="8" lean-forward="false" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tournament.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="34" column="4" lean-forward="false" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="4" />
           <folding>
-            <element signature="e#51#68#0" expanded="true" />
+            <element signature="e#43#63#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PokeFlying.h">
+    <entry file="file://$PROJECT_DIR$/mainPartial.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="429">
-          <caret line="23" column="4" lean-forward="false" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="27" />
+        <state relative-caret-position="135">
+          <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="28" column="0" lean-forward="true" selection-start-line="25" selection-start-column="4" selection-end-line="28" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/2Trainers.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="33" column="8" lean-forward="false" selection-start-line="33" selection-start-column="3" selection-end-line="33" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PokeGrass.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PokeWater.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="21" column="27" lean-forward="false" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
+        <state relative-caret-position="247">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PokeFire.h">
+    <entry file="file://$PROJECT_DIR$/PokeFlying.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="21" column="27" lean-forward="false" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
+        <state relative-caret-position="334">
+          <caret line="18" column="27" lean-forward="false" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PokeElectric.h">
+    <entry file="file://$PROJECT_DIR$/Trainer.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="21" column="27" lean-forward="false" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PokeGrass.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="92" column="9" lean-forward="false" selection-start-line="92" selection-start-column="9" selection-end-line="92" selection-end-column="9" />
+        <state relative-caret-position="19">
+          <caret line="30" column="1" lean-forward="true" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
           <folding>
             <element signature="e#51#68#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PokeElectric.cpp">
+    <entry file="file://$PROJECT_DIR$/2Trainers.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="89" column="25" lean-forward="false" selection-start-line="89" selection-start-column="25" selection-end-line="89" selection-end-column="25" />
+        <state relative-caret-position="247">
+          <caret line="13" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Enums.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1235">
+          <caret line="65" column="9" lean-forward="true" selection-start-line="65" selection-start-column="9" selection-end-line="65" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PokeFlying.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="69" column="18" lean-forward="false" selection-start-line="69" selection-start-column="18" selection-end-line="69" selection-end-column="18" />
           <folding>
             <element signature="e#51#68#0" expanded="true" />
           </folding>
@@ -956,46 +826,84 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PokeWater.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="524">
-          <caret line="98" column="28" lean-forward="true" selection-start-line="98" selection-start-column="28" selection-end-line="98" selection-end-column="28" />
+        <state relative-caret-position="342">
+          <caret line="127" column="24" lean-forward="false" selection-start-line="127" selection-start-column="24" selection-end-line="127" selection-end-column="24" />
           <folding>
             <element signature="e#51#68#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PokeElectric.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pokemon.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="17" lean-forward="false" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
+          <folding>
+            <element signature="e#37#54#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PokeFire.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PokeFire.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="109" column="16" lean-forward="false" selection-start-line="109" selection-start-column="16" selection-end-line="109" selection-end-column="16" />
+        <state relative-caret-position="153">
+          <caret line="18" column="39" lean-forward="false" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
           <folding>
             <element signature="e#51#68#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PokeFlying.cpp">
+    <entry file="file://$PROJECT_DIR$/PokeElectric.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+        <state relative-caret-position="439">
+          <caret line="129" column="0" lean-forward="true" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
           <folding>
             <element signature="e#51#68#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PokeGrass.h">
+    <entry file="file://$PROJECT_DIR$/PokeGrass.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="203">
+          <caret line="17" column="40" lean-forward="false" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
+          <folding>
+            <element signature="e#51#68#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Tournament.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3914">
-          <caret line="206" column="68" lean-forward="false" selection-start-line="206" selection-start-column="68" selection-end-line="206" selection-end-column="68" />
+        <state relative-caret-position="344">
+          <caret line="159" column="28" lean-forward="false" selection-start-line="159" selection-start-column="28" selection-end-line="159" selection-end-column="28" />
+          <folding>
+            <element signature="e#51#68#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pokemon.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="160" column="27" lean-forward="true" selection-start-line="160" selection-start-column="27" selection-end-line="160" selection-end-column="27" />
           <folding>
             <element signature="e#51#68#0" expanded="true" />
           </folding>

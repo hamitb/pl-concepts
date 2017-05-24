@@ -18,10 +18,33 @@ Tournament::~Tournament() {
 
 void Tournament::registerTrainers(const std::vector<Trainer *> &trainers) {
     this->trainers = trainers;
+    registerTrainerIndex();
 }
 
 Trainer *Tournament::commence() {
-    return NULL;
+    int offset = 1;
+    Trainer* winner;
+
+    while(trainers.size() != 1) {
+        Trainer* t1 = trainers.front();
+        Trainer* t2 = *(trainers.end() - offset);
+
+        std::cout << "Started Round: " << t1->tournamentIndex << " vs " << t2->tournamentIndex << std::endl;
+
+        winner = getWinnerTrainer(t1, t2) > 0 ? t1 : t2;
+
+        trainers.erase(trainers.begin());
+
+        trainers.erase(trainers.end() - offset);
+
+        trainers.push_back(winner);
+
+        offset = (trainers.end() - offset) == (trainers.begin()) ? 0 : offset;
+
+        offset++;
+    }
+
+    return winner;
 }
 
 int Tournament::duelBetween(Trainer *trainer1, Trainer *trainer2, Arena currentArena) {
@@ -32,7 +55,7 @@ int Tournament::duelBetween(Trainer *trainer1, Trainer *trainer2, Arena currentA
 
     trainer1->resetDP();
     trainer2->resetDP();
-    std::cout << "    " << trainer1->getName() << " vs " << trainer2->getName()
+    std::cout << "\t" << trainer1->getName() << " vs " << trainer2->getName()
               << ": " << arenaName << std::endl;
 
     while( (trainer1->getDPCount() != 0)
@@ -56,6 +79,7 @@ int Tournament::duelBetween(Trainer *trainer1, Trainer *trainer2, Arena currentA
 
             trainer2->replaceDP();
             lastWinner = 1;
+
         } else if ((lastWinner == 2) && (winner == -1)) {
             p2->levelUp();
             p2->updateEffDamage();
@@ -83,7 +107,7 @@ int Tournament::duelBetween(Trainer *trainer1, Trainer *trainer2, Arena currentA
 
     winnerTrainer = trainer1->getDPCount() != 0 ? 1 : -1;
     winnerName = winnerTrainer == 1 ? trainer1->getName() : trainer2->getName();
-    std::cout << "    " << "WinnerT" << winnerName << std::endl << std::endl;
+    std::cout << "\t" << "WinnerT:" << winnerName << std::endl << std::endl;
 
     trainer1->resetPokemons();
     trainer2->resetPokemons();
@@ -101,7 +125,7 @@ int Tournament::duelBetween(Pokemon *pokemon1, Pokemon *pokemon2, Arena currentA
     while(1) {
         int winner;
 
-        std::cout << "            " << pokemon1->getName() << "(" << pokemon1->getHP() << ")"
+        std::cout << "\t\t\t" << pokemon1->getName() << "(" << pokemon1->getHP() << ")"
              << " hit " << pokemon2->getName() << "(" << pokemon2->getHP() << ")"
              << " " << pokemon1->calculateDamage(pokemon2) << "(" << pokemon1->getArenaEff() << ")" << std::endl;
 
@@ -110,7 +134,7 @@ int Tournament::duelBetween(Pokemon *pokemon1, Pokemon *pokemon2, Arena currentA
 
         if((winner = checkWinner(pokemon1, pokemon2))){
             std::string winnerName = winner == 1 ? pokemon1->getName() : pokemon2->getName();
-            std::cout << "        " << "WinnerP:" << winnerName << std::endl;
+            std::cout << "\t\t" << "WinnerP:" << winnerName << std::endl;
             return winner;
         }
 
@@ -119,28 +143,33 @@ int Tournament::duelBetween(Pokemon *pokemon1, Pokemon *pokemon2, Arena currentA
                 pokemon2->getEffDamage(BURNING);
             if((winner = checkWinner(pokemon1, pokemon2))){
                 std::string winnerName = winner == 1 ? pokemon1->getName() : pokemon2->getName();
-                std::cout << "        " << "WinnerP:" << winnerName << std::endl;
+                std::cout << "\t\t" << "WinnerP:" << winnerName << std::endl;
                 return winner;
             }
             if(pokemon2->isDrowning())
                 pokemon2->getEffDamage(DROWNING);
             if((winner = checkWinner(pokemon1, pokemon2))){
                 std::string winnerName = winner == 1 ? pokemon1->getName() : pokemon2->getName();
-                std::cout << "        " << "WinnerP:" << winnerName << std::endl;
+                std::cout << "\t\t" << "WinnerP:" << winnerName << std::endl;
                 return winner;
             }
             if(pokemon2->isElectrified())
                 pokemon2->getEffDamage(ELECTRIFIED);
             if((winner = checkWinner(pokemon1, pokemon2))){
                 std::string winnerName = winner == 1 ? pokemon1->getName() : pokemon2->getName();
-                std::cout << "        " << "WinnerP:" << winnerName << std::endl;
+                std::cout << "\t\t" << "WinnerP:" << winnerName << std::endl;
                 return winner;
             }
             if(pokemon2->isRooted())
                 pokemon2->getEffDamage(ROOTED);
+            if((winner = checkWinner(pokemon1, pokemon2))){
+                std::string winnerName = winner == 1 ? pokemon1->getName() : pokemon2->getName();
+                std::cout << "\t\t" << "WinnerP:" << winnerName << std::endl;
+                return winner;
+            }
         }
 
-        std::cout << "            " << pokemon2->getName() << "(" << pokemon2->getHP() << ")"
+        std::cout << "\t\t\t" << pokemon2->getName() << "(" << pokemon2->getHP() << ")"
                   << " hit " << pokemon1->getName() << "(" << pokemon1->getHP() << ")"
                   << " " << pokemon2->calculateDamage(pokemon1) << "(" << pokemon2->getArenaEff() << ")" << std::endl;
 
@@ -148,7 +177,7 @@ int Tournament::duelBetween(Pokemon *pokemon1, Pokemon *pokemon2, Arena currentA
 
         if((winner = checkWinner(pokemon1, pokemon2))){
             std::string winnerName = winner == 1 ? pokemon1->getName() : pokemon2->getName();
-            std::cout << "        " << "WinnerP:" << winnerName << std::endl;
+            std::cout << "\t\t" << "WinnerP:" << winnerName << std::endl;
             return winner;
         }
 
@@ -157,28 +186,28 @@ int Tournament::duelBetween(Pokemon *pokemon1, Pokemon *pokemon2, Arena currentA
                 pokemon1->getEffDamage(BURNING);
             if((winner = checkWinner(pokemon1, pokemon2))){
                 std::string winnerName = winner == 1 ? pokemon1->getName() : pokemon2->getName();
-                std::cout << "        " << "WinnerP:" << winnerName << std::endl;
+                std::cout << "\t\t" << "WinnerP:" << winnerName << std::endl;
                 return winner;
             }
             if(pokemon1->isDrowning())
                 pokemon1->getEffDamage(DROWNING);
             if((winner = checkWinner(pokemon1, pokemon2))){
                 std::string winnerName = winner == 1 ? pokemon1->getName() : pokemon2->getName();
-                std::cout << "        " << "WinnerP:" << winnerName << std::endl;
+                std::cout << "\t\t" << "WinnerP:" << winnerName << std::endl;
                 return winner;
             }
             if(pokemon1->isElectrified())
                 pokemon1->getEffDamage(ELECTRIFIED);
             if((winner = checkWinner(pokemon1, pokemon2))){
                 std::string winnerName = winner == 1 ? pokemon1->getName() : pokemon2->getName();
-                std::cout << "        " << "WinnerP:" << winnerName << std::endl;
+                std::cout << "\t\t" << "WinnerP:" << winnerName << std::endl;
                 return winner;
             }
             if(pokemon1->isRooted())
                 pokemon1->getEffDamage(ROOTED);
             if((winner = checkWinner(pokemon1, pokemon2))){
                 std::string winnerName = winner == 1 ? pokemon1->getName() : pokemon2->getName();
-                std::cout << "        " << "WinnerP:" << winnerName << std::endl;
+                std::cout << "\t\t" << "WinnerP:" << winnerName << std::endl;
                 return winner;
             }
         }
@@ -204,8 +233,14 @@ int Tournament::getWinnerTrainer(Trainer *trainer1, Trainer *trainer2) {
 
     winnerName = result > 0 ? trainer1->getName() : trainer2->getName();
 
-    std::cout << "Round Winner: " << winnerName << "!" << std::endl;
+    std::cout << "Round Winner: " << winnerName << "!" << std::endl << std::endl;
     return result;
+}
+
+void Tournament::registerTrainerIndex() {
+    for(int i = 0; i < trainers.size(); i++) {
+        trainers[i]->tournamentIndex = i;
+    }
 }
 
 
