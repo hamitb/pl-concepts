@@ -39,7 +39,7 @@ Trainer *Tournament::commence() {
 
         trainers.push_back(winner);
 
-        offset = (trainers.end() - offset) == (trainers.begin()) ? 0 : offset;
+        offset = (trainers.end() - offset) == (trainers.begin()) ? registerTrainerIndex() : offset;
 
         offset++;
     }
@@ -228,19 +228,21 @@ int Tournament::getWinnerTrainer(Trainer *trainer1, Trainer *trainer2) {
     std::string winnerName;
 
     result += duelBetween(trainer1, trainer2, trainer1->getFavoriteArena());
-    result += duelBetween(trainer2, trainer1, trainer2->getFavoriteArena());
+    result -= duelBetween(trainer2, trainer1, trainer2->getFavoriteArena());
     result += duelBetween(trainer1, trainer2, STADIUM);
 
     winnerName = result > 0 ? trainer1->getName() : trainer2->getName();
 
-    std::cout << "Round Winner: " << winnerName << "!" << std::endl << std::endl;
+    std::cout << "Round Winner: " << winnerName << "!" << std::endl;
     return result;
 }
 
-void Tournament::registerTrainerIndex() {
+int Tournament::registerTrainerIndex() {
     for(int i = 0; i < trainers.size(); i++) {
         trainers[i]->tournamentIndex = i;
     }
+
+    return 0;
 }
 
 

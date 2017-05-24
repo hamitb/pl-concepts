@@ -366,32 +366,32 @@ TrainerCenter.cpp.s:
 	$(MAKE) -f CMakeFiles/hw4.dir/build.make CMakeFiles/hw4.dir/TrainerCenter.cpp.s
 .PHONY : TrainerCenter.cpp.s
 
-mainPartial.o: mainPartial.cpp.o
+main.o: main.cpp.o
 
-.PHONY : mainPartial.o
+.PHONY : main.o
 
 # target to build an object file
-mainPartial.cpp.o:
-	$(MAKE) -f CMakeFiles/hw4.dir/build.make CMakeFiles/hw4.dir/mainPartial.cpp.o
-.PHONY : mainPartial.cpp.o
+main.cpp.o:
+	$(MAKE) -f CMakeFiles/hw4.dir/build.make CMakeFiles/hw4.dir/main.cpp.o
+.PHONY : main.cpp.o
 
-mainPartial.i: mainPartial.cpp.i
+main.i: main.cpp.i
 
-.PHONY : mainPartial.i
+.PHONY : main.i
 
 # target to preprocess a source file
-mainPartial.cpp.i:
-	$(MAKE) -f CMakeFiles/hw4.dir/build.make CMakeFiles/hw4.dir/mainPartial.cpp.i
-.PHONY : mainPartial.cpp.i
+main.cpp.i:
+	$(MAKE) -f CMakeFiles/hw4.dir/build.make CMakeFiles/hw4.dir/main.cpp.i
+.PHONY : main.cpp.i
 
-mainPartial.s: mainPartial.cpp.s
+main.s: main.cpp.s
 
-.PHONY : mainPartial.s
+.PHONY : main.s
 
 # target to generate assembly for a file
-mainPartial.cpp.s:
-	$(MAKE) -f CMakeFiles/hw4.dir/build.make CMakeFiles/hw4.dir/mainPartial.cpp.s
-.PHONY : mainPartial.cpp.s
+main.cpp.s:
+	$(MAKE) -f CMakeFiles/hw4.dir/build.make CMakeFiles/hw4.dir/main.cpp.s
+.PHONY : main.cpp.s
 
 # Help Target
 help:
@@ -429,9 +429,9 @@ help:
 	@echo "... TrainerCenter.o"
 	@echo "... TrainerCenter.i"
 	@echo "... TrainerCenter.s"
-	@echo "... mainPartial.o"
-	@echo "... mainPartial.i"
-	@echo "... mainPartial.s"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 .PHONY : help
 
 

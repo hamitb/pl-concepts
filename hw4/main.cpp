@@ -9,14 +9,10 @@
 #include <iostream>
 #include <vector>
 
-int main(int argv, char** argc)
+int main()
 {
-	if(argv < 2)
-	{
-		return -1;
-	}
 
-	TrainerCenter newCenter(argc[1]);
+	TrainerCenter newCenter("2Trainers.txt");
 
 	std::vector<Trainer*> allTrainers = newCenter.getAllTrainers();
 

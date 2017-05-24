@@ -33,7 +33,7 @@ public:
 private:
 	int checkWinner(Pokemon *pokemon1, Pokemon *pokemon2);
 	int getWinnerTrainer(Trainer* trainer1, Trainer* trainer2);
-	void registerTrainerIndex();
+	int registerTrainerIndex();
 	std::string tournamentName;
 
 	// Return 1 if Pokemon1 wins.

@@ -52,15 +52,15 @@ CMakeFiles/hw4.dir/TrainerCenter.cpp.o: ../Trainer.h
 CMakeFiles/hw4.dir/TrainerCenter.cpp.o: ../TrainerCenter.cpp
 CMakeFiles/hw4.dir/TrainerCenter.cpp.o: ../TrainerCenter.h
 
-CMakeFiles/hw4.dir/mainPartial.cpp.o: ../Enums.h
-CMakeFiles/hw4.dir/mainPartial.cpp.o: ../PokeElectric.h
-CMakeFiles/hw4.dir/mainPartial.cpp.o: ../PokeFire.h
-CMakeFiles/hw4.dir/mainPartial.cpp.o: ../PokeFlying.h
-CMakeFiles/hw4.dir/mainPartial.cpp.o: ../PokeGrass.h
-CMakeFiles/hw4.dir/mainPartial.cpp.o: ../PokeWater.h
-CMakeFiles/hw4.dir/mainPartial.cpp.o: ../Pokemon.h
-CMakeFiles/hw4.dir/mainPartial.cpp.o: ../Tournament.h
-CMakeFiles/hw4.dir/mainPartial.cpp.o: ../Trainer.h
-CMakeFiles/hw4.dir/mainPartial.cpp.o: ../TrainerCenter.h
-CMakeFiles/hw4.dir/mainPartial.cpp.o: ../mainPartial.cpp
+CMakeFiles/hw4.dir/main.cpp.o: ../Enums.h
+CMakeFiles/hw4.dir/main.cpp.o: ../PokeElectric.h
+CMakeFiles/hw4.dir/main.cpp.o: ../PokeFire.h
+CMakeFiles/hw4.dir/main.cpp.o: ../PokeFlying.h
+CMakeFiles/hw4.dir/main.cpp.o: ../PokeGrass.h
+CMakeFiles/hw4.dir/main.cpp.o: ../PokeWater.h
+CMakeFiles/hw4.dir/main.cpp.o: ../Pokemon.h
+CMakeFiles/hw4.dir/main.cpp.o: ../Tournament.h
+CMakeFiles/hw4.dir/main.cpp.o: ../Trainer.h
+CMakeFiles/hw4.dir/main.cpp.o: ../TrainerCenter.h
+CMakeFiles/hw4.dir/main.cpp.o: ../main.cpp
 

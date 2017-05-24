@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/hw4.dir/mainPartial.cpp.o"
+  "CMakeFiles/hw4.dir/main.cpp.o"
   "CMakeFiles/hw4.dir/Pokemon.cpp.o"
   "CMakeFiles/hw4.dir/PokeWater.cpp.o"
   "CMakeFiles/hw4.dir/PokeElectric.cpp.o"

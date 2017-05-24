@@ -13,7 +13,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/macbook/Desktop/METU/242/github_project/hw4/Tournament.cpp" "/Users/macbook/Desktop/METU/242/github_project/hw4/cmake-build-debug/CMakeFiles/hw4.dir/Tournament.cpp.o"
   "/Users/macbook/Desktop/METU/242/github_project/hw4/Trainer.cpp" "/Users/macbook/Desktop/METU/242/github_project/hw4/cmake-build-debug/CMakeFiles/hw4.dir/Trainer.cpp.o"
   "/Users/macbook/Desktop/METU/242/github_project/hw4/TrainerCenter.cpp" "/Users/macbook/Desktop/METU/242/github_project/hw4/cmake-build-debug/CMakeFiles/hw4.dir/TrainerCenter.cpp.o"
-  "/Users/macbook/Desktop/METU/242/github_project/hw4/mainPartial.cpp" "/Users/macbook/Desktop/METU/242/github_project/hw4/cmake-build-debug/CMakeFiles/hw4.dir/mainPartial.cpp.o"
+  "/Users/macbook/Desktop/METU/242/github_project/hw4/main.cpp" "/Users/macbook/Desktop/METU/242/github_project/hw4/cmake-build-debug/CMakeFiles/hw4.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 
